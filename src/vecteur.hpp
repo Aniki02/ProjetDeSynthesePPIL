@@ -1,3 +1,14 @@
+#ifndef Vecteur2D_hpp
+#define Vecteur2D_hpp
+
+#include <stdio.h>
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+
 class Vecteur2D
 {
 public:
@@ -11,5 +22,8 @@ inline const Vecteur2D operator * (const double & a) const;
 inline const Vecteur2D operator - () const;
 
 operator string() const;
-}; // classe Vecteur2D
+};
 
+extern ostream & operator << (ostream &,double);
+
+#endif
