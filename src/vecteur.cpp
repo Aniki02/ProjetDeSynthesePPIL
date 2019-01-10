@@ -1,3 +1,8 @@
+#include "vecteur.hpp"
+#include <iostream>
+#include <sstream>
+using namespace std;
+
 template <class T>
 inline const T operator - (const T & u, const T & v)
 {
@@ -37,5 +42,5 @@ ostream & operator << (ostream & os, const Vecteur2D & u)
 os << (string) u;
 return os;
 }
-.........
+
 
