@@ -29,7 +29,7 @@ public:
 	virtual Forme * clone() const = 0;
 	virtual operator string() const = 0;
 
-	virtual accepteDessin(VisitorDessinerForme * v) const; 
+	virtual void accepteDessin(VisitorDessinerForme * v) const = 0; 
 
 };
 
