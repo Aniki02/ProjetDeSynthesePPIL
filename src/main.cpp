@@ -16,6 +16,6 @@ int main()
 	cout << " u1 = " <<  u1 << endl;
 	cout << " u2 = " <<  u2 << endl;
 	cout << " u1 + u2 = " <<  u1+u2 << endl;
-	cout << " 5*u1 = " <<  5.8*u1 << endl;
+	cout << " 5.8*u1 = " <<  5.8*u1 << endl;
 
 }
