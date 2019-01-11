@@ -7,6 +7,7 @@
 using namespace std;
 
 class Vecteur2D;
+class VisitorDessinerForme;
 /**
 Une forme geometrique est caracterise par un couleur 
 un int défini par les constantes static
@@ -26,7 +27,9 @@ public:
 
 	virtual double getAir() const = 0;
 	virtual Forme * clone() const = 0;
-	virtual operator string() const = 0; 
+	virtual operator string() const = 0;
+
+	virtual accepteDessin(VisitorDessinerForme * v) const; 
 
 };
 
