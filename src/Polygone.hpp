@@ -10,20 +10,20 @@
 class Vecteur2D;
 
 class Polygone: public Forme{
-	vector<Vecteur2D*> _points;
+	vector<Vecteur2D> _points;
 
     public :
 
-    Polygone(int c):Forme(c){}
+    Polygone(int c, const vector<Vecteur2D> points);
     virtual ~Polygone(){}
  //   Forme * clone(){return new Polygone(*this);}
     virtual double getAir()const=0;
-    void addPoint(Vecteur2D*);
-    const Vecteur2D * getPointAt(unsigned int index) const;
-    virtual Forme * translation (const Vecteur2D & vecTrans) = 0;
-	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie) = 0;
-	virtual Forme * rotation (const Vecteur2D & pInvariant, double radiant) = 0;
-	void accepteDessin(VisitorDessinerForme * v) const = 0;
+    void addPoint(Vecteur2D);
+    const Vecteur2D getPointAt(unsigned int index) const;
+    virtual Forme * translation (const Vecteur2D & vecTrans);
+	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie);
+	virtual Forme * rotation (const Vecteur2D & pInvariant, double radiant);
+	void accepteDessin(VisitorDessinerForme * v) const;
     virtual operator string() const;
 
 

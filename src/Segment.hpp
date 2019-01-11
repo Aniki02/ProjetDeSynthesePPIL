@@ -6,7 +6,7 @@
 #include "Vecteur2D.hpp"
 #include <iostream>
 class Forme;
-class VisitorDessinForme;
+class VisitorDessinerForme;
 class Vecteur2D;
 
 class Segment : public Forme{
@@ -22,7 +22,7 @@ public :
     Vecteur2D getOrigine()const {return _origine;}
     void setArrive(const Vecteur2D &v){_arrive = v;}
     void setOrigine(const Vecteur2D &v){_origine = v;}
-    void accepteDessin(VisitorDessinForme *visiteur) const;
+    void accepteDessin(VisitorDessinerForme *visiteur) const;
 
 	virtual Forme * translation (const Vecteur2D & vecTrans);
 	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie);

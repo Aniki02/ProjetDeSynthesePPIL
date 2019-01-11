@@ -15,7 +15,7 @@ class Cercle : public Forme{
     double _rayon;
 
     public :
-    Cercle(Vecteur2D v, double r, int c):Forme(c),_rayon(r), _centre(v){}
+    Cercle(Vecteur2D v, double r, int c):Forme(c), _centre(v),_rayon(r){}
     virtual ~Cercle(){}
  //   Forme * clone(){return new Cercle(*this);}
     double getAir()const;
@@ -23,10 +23,10 @@ class Cercle : public Forme{
     double getRayon() const {return _rayon;}
     void setCentre(const Vecteur2D &v){_centre = v;}
     void setRayon(double r){_rayon = r;}
-    virtual Forme * translation (const Vecteur2D & vecTrans) = 0;
-	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie) = 0;
-	virtual Forme * rotation (const Vecteur2D & pInvariant, double radiant) = 0;
-	void accepteDessin(VisitorDessinerForme * v) const = 0;
+    virtual Forme * translation (const Vecteur2D & vecTrans);
+	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie);
+	virtual Forme * rotation (const Vecteur2D & pInvariant, double radiant);
+	void accepteDessin(VisitorDessinerForme * v) const;
     virtual operator string() const;
 };
 

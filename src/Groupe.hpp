@@ -1,23 +1,28 @@
 #ifndef _GROUPE_HPP
 #define _GROUPE_HPP
 
-#include
-#include <Forme.hpp>
+#include <vector>
+#include "Forme.hpp"
 class Groupe : public Forme{
-	vector<Forme *> _groupes;
+	vector<Forme *> _groupe;
 public:
-	virtual void translation (const Vecteur2D & vecTrans) = 0;
-	virtual void homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie) = 0;
-	virtual void rotation (const Vecteur2D & pInvariant, double radiant) = 0;
+	Groupe(int couleur): Forme(couleur){}
+	Groupe(const Groupe &);
+	virtual ~Groupe();
 
-	virtual Forme * translation (const Vecteur2D & vecTrans) = 0;
-	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie) = 0;
-	virtual Forme * rotation (const Vecteur2D & pInvariant, double radiant) = 0;
+	void addForme(Forme *);
+	const Forme * getAt(unsigned int ) const;
 
-	virtual double getAir() const = 0;
-	virtual Forme * clone() const = 0;
-	virtual operator string() const = 0;
+	const vector<Forme *> getGroupe() const{return _groupe;}
 
-	virtual void accepteDessin(VisitorDessinerForme * v) const = 0;
+	Forme * translation (const Vecteur2D & vecTrans);
+	Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie);
+	Forme * rotation (const Vecteur2D & pInvariant, double radiant);
+
+	double getAir() const;
+	Forme * clone() const;
+	operator string() const;
+
+	void accepteDessin(VisitorDessinerForme * v) const;
 };
 #endif
