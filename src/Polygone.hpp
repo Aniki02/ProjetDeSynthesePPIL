@@ -7,17 +7,17 @@
 #include <iostream>
 #include <vector>
 
+class Vecteur2D;
+
 class Polygone: public Forme{
 	vector<Vecteur2D*> _points;
 
     public :
 
-    Polygone(){}
+    Polygone(int c):Forme(c){}
     virtual ~Polygone(){}
  //   Forme * clone(){return new Polygone(*this);}
-    double getAir()const;
-    Vecteur2D getCentre()const {return _centre;}
-    double getRayon() const {return _rayon;}
+    virtual double getAir()const=0;
     void addPoint(Vecteur2D*);
     const Vecteur2D * getPointAt(unsigned int index) const;
     virtual Forme * translation (const Vecteur2D & vecTrans) = 0;
