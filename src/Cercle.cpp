@@ -1,4 +1,5 @@
 #include "Cercle.hpp"
+#include "VisitorDessinerForme.hpp"
 #include <sstream>
 
 using namespace std;
@@ -19,7 +20,7 @@ using namespace std;
         return NULL;
     }
 	void Cercle::accepteDessin(VisitorDessinerForme * v) const {
-        //TODO
+        v->visite(this);
     }
     Cercle::operator string() const{
     ostringstream os;

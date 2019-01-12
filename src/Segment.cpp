@@ -1,10 +1,11 @@
 #include "Segment.hpp"
+#include "VisitorDessinerForme.hpp"
 #include <sstream>
 
 using namespace std;
 
-    void Segment::accepteDessin(VisitorDessinerForme *visiteur) const{
-    	//TODO
+    void Segment::accepteDessin(VisitorDessinerForme * v) const{
+    	v->visite(this);
     }
 
 	/*Forme * Segment::clone() const {

@@ -1,4 +1,5 @@
 #include "Groupe.hpp"
+#include "VisitorDessinerForme.hpp"
 #include <sstream>
 #include <vector>
 
@@ -92,5 +93,5 @@ Groupe::operator string() const{
 
 
 void Groupe::accepteDessin(VisitorDessinerForme * v) const{
-	//TODO
+	v->visite(this);
 }

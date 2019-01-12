@@ -1,4 +1,5 @@
 #include "Polygone.hpp"
+#include "VisitorDessinerForme.hpp"
 #include <sstream>
 #include <vector>
 
@@ -36,7 +37,7 @@ using namespace std;
     }
 
 	void Polygone::accepteDessin(VisitorDessinerForme * v) const {
-        //TODO
+        v->visite(this);
     };
 
     Polygone::operator string() const
