@@ -5,7 +5,7 @@
 
 
 
-Groupe::Groupe(const Groupe & g): Forme(g.getCouleur()){
+Groupe::Groupe(const Groupe & g): Forme(g.getNumeroCouleur()){
 	vector<Forme *>::const_iterator it;
 	for(it = g.getGroupe().begin(); it != g.getGroupe().end(); it++)
 		_groupe.push_back((*it)->clone());
@@ -23,7 +23,9 @@ Lance une excepton si elle est null
 void Groupe::addForme(Forme * f){
 	if ( f == NULL)
 		throw (" la forme donnée en parametre est null");
-	_groupe.push_back(f);
+	Forme * newF = f->clone();
+	newF->setCouleur(this->getNumeroCouleur());
+	_groupe.push_back(newF);
 }
 
 /**
@@ -87,7 +89,7 @@ Groupe::operator string() const{
 
 	os << "Groupe de forme : " << endl;
 	for(it = _groupe.begin(); it != _groupe.end() ; it++)
-		os << **it;
+		os << **it << endl;
 	return os.str();
 }
 

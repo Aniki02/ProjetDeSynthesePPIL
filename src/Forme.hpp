@@ -16,10 +16,12 @@ class Forme{
 	int _couleur;
 public:
 	static const int BLACK = 1, BLUE = 2, RED = 3, GREEN = 4, YELLOW = 5, CYAN = 6;
-	Forme(int couleur);
+	Forme(int c);
 	virtual ~Forme();
 
-	int getCouleur() const ;
+	const string getCouleur() const ;
+	void setCouleur(int c);
+	int getNumeroCouleur () const {return _couleur;}
 
 	virtual Forme * translation (const Vecteur2D & vecTrans) = 0;
 	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie) = 0;

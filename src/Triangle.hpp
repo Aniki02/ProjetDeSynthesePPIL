@@ -18,6 +18,7 @@ public :
     virtual ~Triangle(){}
     Forme * clone() const{return new Triangle(*this);}
     double getAir() const {return 0;}
+    operator string() const;
 
     void accepteDessin(VisitorDessinerForme * v) const;
 };

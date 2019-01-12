@@ -24,6 +24,7 @@ using namespace std;
     }
     Cercle::operator string() const{
     ostringstream os;
-	os << "Centre " << _centre <<",  Rayon : " << _rayon << ")";
+    os << "CERCLE" << endl;
+	os << "Couleur : " << this->getCouleur() << ", Centre " << _centre <<",  Rayon : " << _rayon << ")";
 	return os.str();
     }

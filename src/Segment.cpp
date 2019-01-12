@@ -28,6 +28,7 @@ using namespace std;
 
 	Segment::operator string() const{
     	ostringstream os;
-		os << "Point d'origine : " << _origine <<",  Point d'arrive : " << _arrive << ")";
+    	os << "SEGMENT : " << endl;
+		os << "Couleur : " << this->getCouleur() << ", Point d'origine : " << _origine <<",  Point d'arrive : " << _arrive << ")";
 		return os.str();
 	}

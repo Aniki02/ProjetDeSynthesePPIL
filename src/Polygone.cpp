@@ -43,9 +43,13 @@ using namespace std;
     Polygone::operator string() const
     { 
         ostringstream os;
+        os << "POLYGONE : " << endl;
+        os << "Couleur : " << this->getCouleur();
         vector<Vecteur2D>::const_iterator it;
+        int i = 1;
         for( it = _points.begin(); it != _points.end(); it++)
-    	   os << *it;
+    	   os << ", Point Numero" << i << ":" << *it << "   ";
+           i++;
     	return os.str();
 	}
 
