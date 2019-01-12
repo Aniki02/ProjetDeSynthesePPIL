@@ -9,6 +9,7 @@
 #include "Triangle.hpp"
 #include "Segment.hpp"
 #include "Cercle.hpp"
+#include "VisitorMock.hpp"
 
 using namespace std;
 
@@ -59,6 +60,16 @@ int main()
 	g.addForme(triangle);
 	g.addForme(cercle);
 	cout << g << endl;
+
+
+	//--------------------- TEST DP VISITOR A L'AIDE D'UN MOCK ------------------- //
+
+	VisitorDessinerForme * visiteur = new VisitorMock();
+	cout << "--------------- TEST DP VISITOR A L'AIDE D'UN MOCK -------------------" << endl << endl << endl;
+
+	vector<Forme *>::const_iterator it;
+	for (it = g.getGroupe().begin(); it != g.getGroupe().end(); it++)
+		(*it)->accepteDessin(visiteur);
 
 
 
