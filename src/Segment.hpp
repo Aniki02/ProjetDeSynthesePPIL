@@ -16,7 +16,7 @@ Vecteur2D _arrive;
 public :
     Segment(const Vecteur2D &x, const Vecteur2D &y, int couleur):Forme(couleur), _origine(x), _arrive(y){}
     virtual ~Segment(){}
-    Forme * clone() const;
+    Forme * clone() const{return new Segment(*this);}
     double getAir() const {return 0;}
     Vecteur2D getArrive()const {return _arrive; }
     Vecteur2D getOrigine()const {return _origine;}

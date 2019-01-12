@@ -17,7 +17,7 @@ class Cercle : public Forme{
     public :
     Cercle(Vecteur2D v, double r, int c):Forme(c), _centre(v),_rayon(r){}
     virtual ~Cercle(){}
- //   Forme * clone(){return new Cercle(*this);}
+    Forme * clone() const {return new Cercle(*this);}
     double getAir()const;
     Vecteur2D getCentre()const {return _centre;}
     double getRayon() const {return _rayon;}

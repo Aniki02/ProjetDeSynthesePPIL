@@ -16,8 +16,8 @@ class Polygone: public Forme{
 
     Polygone(int c, const vector<Vecteur2D> points);
     virtual ~Polygone(){}
- //   Forme * clone(){return new Polygone(*this);}
-    virtual double getAir()const=0;
+    Forme * clone() const{return new Polygone(*this);}
+    virtual double getAir()const{return 0;}
     void addPoint(Vecteur2D);
     const Vecteur2D getPointAt(unsigned int index) const;
     virtual Forme * translation (const Vecteur2D & vecTrans);
