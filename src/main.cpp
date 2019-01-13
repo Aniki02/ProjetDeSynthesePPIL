@@ -10,12 +10,13 @@
 #include "Segment.hpp"
 #include "Cercle.hpp"
 #include "VisitorMock.hpp"
+#include "DessinerSFML.hpp"
 
 using namespace std;
 
 int main()
 {
-
+/*
 	//-----TEST DE LA CLASSE VECTEUR2D ------//
 	cout << "-----TEST des vecteurs 2D------- \n";
 
@@ -40,7 +41,7 @@ int main()
 
 	//-------Triangle --------//
 
-	pointsTriangle.push_back(Atriangle); 
+	pointsTriangle.push_back(Atriangle);
 	pointsTriangle.push_back(Btriangle);
 	pointsTriangle.push_back(Ctriangle);
 
@@ -71,14 +72,26 @@ int main()
 	for (it = g.getGroupe().begin(); it != g.getGroupe().end(); it++)
 		(*it)->accepteDessin(visiteur);
 
-
-
-
-
-
-
-
-
-
-
+    //-----------------------TEST DESSINER FORME SFML------------------------------//*/
+  Vecteur2D v(10,20), u(50,30), i(40,40),j(6,4);
+    /* vector<Vecteur2D> vec;
+    Vecteur2D v(1,2), u(5,3), i(4,4),j(6,4);
+    Polygone p(1, vec);
+    p.addPoint(v);
+    p.addPoint(u);
+    p.addPoint(i);
+    p.addPoint(j); */
+    vector<Vecteur2D> vecc;
+    vecc.push_back(v);
+    vecc.push_back(u);
+    vecc.push_back(i);
+    vecc.push_back(j);
+  //  Triangle t(1, vecc);
+  Polygone p(1, vecc);
+    Vecteur2D y(6,8);
+    Cercle c(1,y,5);
+    Segment s(1, v, u);
+    VisitorDessinerForme * visiteuse = new DessinerSFML();
+    p.accepteDessin(visiteuse);
+    c.accepteDessin(visiteuse);
 }

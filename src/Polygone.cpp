@@ -11,7 +11,7 @@ using namespace std;
             throw ("Un polygone doit etre compose de au moins 3 points");
         for(it = points.begin(); it != points.end(); it++)
             _points.push_back(*it);
-        
+
     }
     void Polygone::addPoint(Vecteur2D v){
 		_points.push_back(v);
@@ -41,7 +41,7 @@ using namespace std;
     };
 
     Polygone::operator string() const
-    { 
+    {
         ostringstream os;
         os << "POLYGONE : " << endl;
         os << "Couleur : " << this->getCouleur();

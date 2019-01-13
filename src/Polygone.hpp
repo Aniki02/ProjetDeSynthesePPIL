@@ -10,8 +10,8 @@
 class Vecteur2D;
 
 class Polygone: public Forme{
-	vector<Vecteur2D> _points;
 
+    vector<Vecteur2D> _points;
     public :
 
     Polygone(int c, const vector<Vecteur2D> points);
@@ -25,6 +25,7 @@ class Polygone: public Forme{
 	virtual Forme * rotation (const Vecteur2D & pInvariant, double radiant);
 	void accepteDessin(VisitorDessinerForme * v) const;
     virtual operator string() const;
+    const vector<Vecteur2D> getPoints() const{return _points;}
 
 
 

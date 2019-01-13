@@ -22,6 +22,7 @@ public:
 	double getAir() const;
 	Forme * clone() const;
 	operator string() const;
+	const vector<Forme *> getGroupes()const {return _groupe;}
 
 	void accepteDessin(VisitorDessinerForme * v) const;
 };
