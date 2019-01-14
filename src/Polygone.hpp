@@ -26,6 +26,8 @@ class Polygone: public Forme{
 	void accepteDessin(VisitorDessinerForme * v) const;
     virtual operator string() const;
     const vector<Vecteur2D> getPoints() const{return _points;}
+    operator string() const;
+
 
 
 

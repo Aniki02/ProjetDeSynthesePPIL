@@ -40,16 +40,17 @@ using namespace std;
         v->visite(this);
     };
 
-    Polygone::operator string() const
-    {
+    Polygone::operator string() const{
+        int i = 1;
         ostringstream os;
         os << "POLYGONE : " << endl;
         os << "Couleur : " << this->getCouleur();
         vector<Vecteur2D>::const_iterator it;
-        int i = 1;
-        for( it = _points.begin(); it != _points.end(); it++)
-    	   os << ", Point Numero" << i << ":" << *it << "   ";
-           i++;
+        for( it = _points.begin(); it != _points.end(); it++){
+            os << ", Point Numero " << i << ":" << *it << "   ";
+            i++;
+        }
+
     	return os.str();
 	}
 
