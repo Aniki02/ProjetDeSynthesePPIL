@@ -8,6 +8,6 @@ class VisitorMock : public VisitorDessinerForme{
 	void visite(const Cercle * cercle) const;
 	void visite(const Polygone * polygone) const;
 	void visite(const Triangle * triangle) const;
-	void visite(const Groupe * groupe) const;
+
 };
 #endif

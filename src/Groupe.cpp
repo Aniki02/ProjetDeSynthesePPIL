@@ -29,7 +29,7 @@ void Groupe::addForme(Forme * f){
 }
 
 /**
-Renvoi la forme a la position i 
+Renvoi la forme a la position i
 Exception si i plus grand que tableau
 */
 const Forme * Groupe::getAt(unsigned int i) const{
@@ -39,7 +39,7 @@ const Forme * Groupe::getAt(unsigned int i) const{
 }
 
 /**
-Renvoi un nouvelle forme qui est la translation de la forme courante 
+Renvoi un nouvelle forme qui est la translation de la forme courante
 */
 Forme * Groupe::translation (const Vecteur2D & vecTrans) {
 	//TODO
@@ -47,7 +47,7 @@ Forme * Groupe::translation (const Vecteur2D & vecTrans) {
 }
 
 /**
-Renvoi un nouvelle forme qui est l'homothetie de la forme courante 
+Renvoi un nouvelle forme qui est l'homothetie de la forme courante
 */
 Forme * Groupe::homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie) {
 	//TODO
@@ -63,7 +63,7 @@ Forme * Groupe::rotation (const Vecteur2D & pInvariant, double radiant){
 }
 
 /**
-Renvoie la somme des airs du groupe 
+Renvoie la somme des airs du groupe
 */
 double Groupe::getAir() const{
 	vector<Forme *>::const_iterator it;
@@ -95,5 +95,5 @@ Groupe::operator string() const{
 
 
 void Groupe::accepteDessin(VisitorDessinerForme * v) const{
-	v->visite(this);
+	//v->visite(this);
 }

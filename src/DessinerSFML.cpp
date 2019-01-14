@@ -119,28 +119,5 @@ void DessinerSFML::visite(const Triangle * triangle) const{
     }
 
 }
-void DessinerSFML::visite(const Groupe * groupe) const{
-	//sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
 
-//    vector<Forme *>::const_iterator it;
- //   for (it = groupe->getGroupes().begin(); it != groupe->getGroupes().end(); it++){
-                //consSFML(it.clone());
-   //             this->visite((*it)->clone());
-    }
-
- /*   while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-
-        window.clear();
-        for (it = groupe->getGroupes().begin(); it != groupe->getGroupes().end(); it++){
-                desSFML(it.clone());
-           }
-        window.display();
-    }*/
 

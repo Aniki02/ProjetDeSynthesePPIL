@@ -14,7 +14,7 @@ public:
 	virtual void visite(const Cercle * cercle) const = 0;
 	virtual void visite(const Polygone * polygone) const = 0;
 	virtual void visite(const Triangle * triangle) const = 0;
-	virtual void visite(const Groupe * groupe) const = 0;
+
 };
 
 #endif

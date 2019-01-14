@@ -19,7 +19,3 @@ void VisitorMock::visite(const Triangle * triangle) const{
 	cout << "VisitorMock : Dessin d'un triangle" << endl;
 	cout << *triangle << endl;
 }
-void VisitorMock::visite(const Groupe * groupe) const{
-	cout << "VisitorMock : Dessin d'un groupe" << endl;
-	cout << *groupe << endl;
-}
