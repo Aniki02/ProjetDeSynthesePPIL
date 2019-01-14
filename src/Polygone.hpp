@@ -24,7 +24,6 @@ class Polygone: public Forme{
 	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie);
 	virtual Forme * rotation (const Vecteur2D & pInvariant, double radiant);
 	void accepteDessin(VisitorDessinerForme * v) const;
-    virtual operator string() const;
     const vector<Vecteur2D> getPoints() const{return _points;}
     operator string() const;
 

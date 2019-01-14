@@ -81,28 +81,27 @@ int main()
 
 
     //-----------------------TEST DESSINER FORME SFML------------------------------//*/
-  Vecteur2D v(10,20), u(50,30), i(40,40),j(6,4);
+ Vecteur2D v2(10,20), u10(50,30), i2(40,40),j2(6,4);
     /* vector<Vecteur2D> vec;
     Vecteur2D v(1,2), u(5,3), i(4,4),j(6,4);
     Polygone p(1, vec);
-    p.addPoint(v);
-    p.addPoint(u);
-    p.addPoint(i);
-    p.addPoint(j); */
+    p.addPoint(v2);
+    p.addPoint(u2);
+    p.addPoint(i2);
+    p.addPoint(j2); */
     vector<Vecteur2D> vecc;
-    vecc.push_back(v);
-    vecc.push_back(u);
-    vecc.push_back(i);
-    vecc.push_back(j);
+    vecc.push_back(v2);
+    vecc.push_back(u10);
+    vecc.push_back(i2);
+    vecc.push_back(j2);
   //  Triangle t(1, vecc);
   Polygone p(1, vecc);
-    Vecteur2D y(6,8);
-    Cercle c(1,y,5);
-    Segment s(1, v, u);
+    Vecteur2D y2(6,8);
+    Cercle c(1,y2,5);
+    Segment s(1, v2, u10);
     VisitorDessinerForme * visiteuse = new DessinerSFML();
-    p.accepteDessin(visiteuse);
     c.accepteDessin(visiteuse);
-}
+
 
 
 	//------ Test chaine de responsabilite sans fichier -------------//
