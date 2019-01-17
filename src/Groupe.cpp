@@ -92,5 +92,6 @@ Groupe::operator string() const{
 
 
 void Groupe::accepteDessin(VisitorDessinerForme * v) const{
-	//v->visite(this);
+	cout << "Appel de la methode visite" << endl;
+	v->visite(this);
 }

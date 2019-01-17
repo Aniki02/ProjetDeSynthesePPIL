@@ -8,6 +8,7 @@ class DessinerJava : public VisitorDessinerForme{
 	void visite(const Cercle * cercle) const;
 	void visite(const Polygone * polygone) const;
 	void visite(const Triangle * triangle) const;
+	
 
 };
 #endif
