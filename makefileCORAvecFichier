@@ -1,0 +1,39 @@
+#Creation de TestCORAvecFichier.out
+CC = g++
+LINK = $(CC)
+OPTIONS = -c -Wall -std=c++11 $(INCLUDE)
+INCLUDE = -I. -Iinclude -Isrc
+all: TestCORAvecFichier.o Forme.o Segment.o Cercle.o Groupe.o Polygone.o Triangle.o StringEnFormeCOR.o StringEnFormeCORCercle.o StringEnFormeCORPolygone.o StringEnFormeCORSegment.o StringEnFormeCORTriangle.o StringEnFormeCORGroupe.o ChargeurListeFormes.o
+	$(LINK) obj/Forme.o obj/Segment.o obj/Cercle.o obj/Groupe.o obj/Polygone.o obj/Triangle.o obj/TestCORAvecFichier.o obj/StringEnFormeCOR.o obj/StringEnFormeCORCercle.o obj/StringEnFormeCORSegment.o obj/StringEnFormeCORPolygone.o obj/StringEnFormeCORGroupe.o obj/StringEnFormeCORTriangle.o obj/ChargeurListeFormes.o -o bin/TestCORAvecFichier.out
+
+TestCORAvecFichier.o:
+	$(CC) $(OPTIONS) src/TestCORAvecFichier.cpp -o obj/TestCORAvecFichier.o
+Forme.o:
+	$(CC) $(OPTIONS) src/Forme.cpp -o obj/Forme.o
+Segment.o:
+	$(CC) $(OPTIONS) src/Segment.cpp -o obj/Segment.o
+Cercle.o:
+	$(CC) $(OPTIONS) src/Cercle.cpp -o obj/Cercle.o
+Groupe.o:
+	$(CC) $(OPTIONS) src/Groupe.cpp -o obj/Groupe.o
+Polygone.o:
+	$(CC) $(OPTIONS) src/Polygone.cpp -o obj/Polygone.o
+Triangle.o:
+	$(CC) $(OPTIONS) src/Triangle.cpp -o obj/Triangle.o
+StringEnFormeCOR.o:
+	$(CC) $(OPTIONS) src/StringEnFormeCOR.cpp -o obj/StringEnFormeCOR.o
+StringEnFormeCORCercle.o:
+	$(CC) $(OPTIONS) src/StringEnFormeCORCercle.cpp -o obj/StringEnFormeCORCercle.o
+StringEnFormeCORPolygone.o:
+	$(CC) $(OPTIONS) src/StringEnFormeCORPolygone.cpp -o obj/StringEnFormeCORPolygone.o
+StringEnFormeCORSegment.o:
+	$(CC) $(OPTIONS) src/StringEnFormeCORSegment.cpp -o obj/StringEnFormeCORSegment.o
+StringEnFormeCORTriangle.o:
+	$(CC) $(OPTIONS) src/StringEnFormeCORTriangle.cpp -o obj/StringEnFormeCORTriangle.o
+StringEnFormeCORGroupe.o:
+	$(CC) $(OPTIONS) src/StringEnFormeCORGroupe.cpp -o obj/StringEnFormeCORGroupe.o
+ChargeurListeFormes.o:
+	$(CC) $(OPTIONS) src/ChargeurListeFormes.cpp -o obj/ChargeurListeFormes.o
+
+clean: 
+	rm obj/TestCORAvecFichier.o

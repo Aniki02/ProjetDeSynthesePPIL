@@ -3,10 +3,13 @@
 
 #include <vector>
 #include "Forme.hpp"
+#include "Couleur.hpp"
+
+
 class Groupe : public Forme{
 	vector<Forme *> _groupe;
 public:
-	Groupe(int couleur): Forme(couleur){}
+	Groupe(Couleur couleur): Forme(couleur){}
 	Groupe(const Groupe &);
 	virtual ~Groupe();
 

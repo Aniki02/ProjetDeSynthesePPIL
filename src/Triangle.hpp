@@ -5,6 +5,8 @@
 #include "Vecteur2D.hpp"
 #include "Polygone.hpp"
 #include <iostream>
+#include "Couleur.hpp"
+
 
 class VisitorDessinForme;
 class Vecteur2D;
@@ -13,7 +15,7 @@ class Vecteur2D;
 class Triangle: public Polygone{
 
 public :
-    Triangle(int couleur, vector<Vecteur2D> points):Polygone(couleur, points){}
+    Triangle(Couleur couleur, vector<Vecteur2D> points):Polygone(couleur, points){}
 
     virtual ~Triangle(){}
     Forme * clone() const{return new Triangle(*this);}

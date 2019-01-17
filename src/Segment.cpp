@@ -4,6 +4,13 @@
 
 using namespace std;
 
+
+	Segment::Segment( Couleur couleur, const Vecteur2D &x, const Vecteur2D &y):Forme(couleur){
+		/*if (x == y)
+			throw ("Les 2 points doivent etre different"); */
+		_origine = x;
+		_arrive = y;
+	}
     void Segment::accepteDessin(VisitorDessinerForme * v) const{
     	v->visite(this);
     }
@@ -28,7 +35,6 @@ using namespace std;
 
 	Segment::operator string() const{
     	ostringstream os;
-    	os << "SEGMENT : " << endl;
-		os << "Couleur : " << this->getCouleur() << ", Point d'origine : " << _origine <<",  Point d'arrive : " << _arrive << ")";
+    	os << "Segment-Couleur:" << this->getCouleur() << "-" << this->getOrigine() << "-"<< this->getArrive();
 		return os.str();
 	}

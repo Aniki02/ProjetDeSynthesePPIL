@@ -1,0 +1,27 @@
+#Creation de TestDessinerSFML.out
+CC = g++
+LINK = $(CC)
+OPTIONS = -c -Wall -std=c++11 $(INCLUDE)
+INCLUDE = -I. -Iinclude -Isrc
+all: TestDessinerSFML.o Forme.o Segment.o Cercle.o Groupe.o Polygone.o Triangle.o DessinerSFML.o
+	$(LINK) obj/Forme.o obj/Segment.o obj/Cercle.o obj/Groupe.o obj/Polygone.o obj/Triangle.o obj/TestDessinerSFML.o obj/DessinerSFML.o -lsfml-graphics -lsfml-window -lsfml-system -o bin/TestDessinerSFML.out
+
+TestDessinerSFML.o:
+	$(CC) $(OPTIONS) src/TestDessinerSFML.cpp -o obj/TestDessinerSFML.o
+Forme.o:
+	$(CC) $(OPTIONS) src/Forme.cpp -o obj/Forme.o
+Segment.o:
+	$(CC) $(OPTIONS) src/Segment.cpp -o obj/Segment.o
+Cercle.o:
+	$(CC) $(OPTIONS) src/Cercle.cpp -o obj/Cercle.o
+Groupe.o:
+	$(CC) $(OPTIONS) src/Groupe.cpp -o obj/Groupe.o
+Polygone.o:
+	$(CC) $(OPTIONS) src/Polygone.cpp -o obj/Polygone.o
+Triangle.o:
+	$(CC) $(OPTIONS) src/Triangle.cpp -o obj/Triangle.o
+DessinerSFML.o:
+	$(CC) $(OPTIONS) src/DessinerSFML.cpp -o obj/DessinerSFML.o
+
+clean: 
+	rm obj/TestDessinerSFML.o

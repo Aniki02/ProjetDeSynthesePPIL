@@ -14,6 +14,9 @@
 #include "StringEnFormeCOR.hpp"
 #include "StringEnFormeCORCercle.hpp"
 #include "StringEnFormeCORSegment.hpp"
+#include "StringEnFormeCORPolygone.hpp"
+#include "StringEnFormeCORTriangle.hpp"
+#include "StringEnFormeCORGroupe.hpp"
 #include "StringEnForme.hpp"
 
 
@@ -81,25 +84,22 @@ int main()
 
 
     //-----------------------TEST DESSINER FORME SFML------------------------------//*/
- Vecteur2D v2(10,20), u10(50,30), i2(40,40),j2(6,4);
-    /* vector<Vecteur2D> vec;
-    Vecteur2D v(1,2), u(5,3), i(4,4),j(6,4);
-    Polygone p(1, vec);
-    p.addPoint(v2);
-    p.addPoint(u2);
-    p.addPoint(i2);
-    p.addPoint(j2); */
+ 	cout << "-----------------------TEST DESSINER FORME SFML------------------------------"<< endl;
+ 	Vecteur2D v2(10,20), u10(50,30), i2(40,40),j2(6,4);
+    
     vector<Vecteur2D> vecc;
     vecc.push_back(v2);
     vecc.push_back(u10);
     vecc.push_back(i2);
     vecc.push_back(j2);
-  //  Triangle t(1, vecc);
-  Polygone p(1, vecc);
+  	Polygone p(1, vecc);
     Vecteur2D y2(6,8);
-    Cercle c(1,y2,5);
+    Cercle c(1,y2,150);
     Segment s(1, v2, u10);
+
+    cout << p <<endl;
     VisitorDessinerForme * visiteuse = new DessinerSFML();
+    p.accepteDessin(visiteuse);
     c.accepteDessin(visiteuse);
 
 
@@ -110,32 +110,33 @@ int main()
 
 
 	//Construction de la chaine de responsabilité
-	StringEnFormeCOR * sC, *sS;
+	StringEnFormeCOR * sC, *sP, *sT, *sG ,*sS;
 
-	sS = new StringEnFormeCORSegment(NULL);
-	sC = new StringEnFormeCORCercle(sS);
+	sG = new StringEnFormeCORGroupe(NULL);
+	sS = new StringEnFormeCORSegment(sG);
+	sP = new StringEnFormeCORPolygone(sS);
+	sT = new StringEnFormeCORTriangle(sP);
+	sC = new StringEnFormeCORCercle(sT);
 
 
 
 
 	//Construction du tableau de string a envoyer a la chaine de responsabilité
-	string s1("cercle,1,100,100,4.5"), s2("segment,2,10,10,30,30"), s3("blablabla");
+	string s1("Cercle-Couleur:1-Centre(10,10)-Rayon:10"), s2("Segment-Couleur:2-(10,10)-(30,30)"), s3("blablabla"), s4("Polygone-NbPoints:4-Couleur:3-(10,10)-(30,30)-(40,40)-(50,50)");
+	string s5("Triangle-Couleur:4-(10,10)-(10,30)-(30,10)"), s6("Groupe-Couleur:3[Triangle-Couleur:4-(10,10)-(10,30)-(30,10)|Segment-Couleur:2-(10,10)-(30,30)|Cercle-Couleur:1-Centre(10,10)-Rayon:10|]");
 
 	vector<string> tab_string;
 	vector<string>::const_iterator it;
-
-	//vector<Forme *> tab_forme;
-	//vector<Forme *>::const_iterator it2;
 	Groupe * groupe2 = new Groupe(Forme::RED);
 
-	tab_string.push_back(s1);
-	tab_string.push_back(s2);
-	tab_string.push_back(s3);
+	//tab_string.push_back(s1);
+	//tab_string.push_back(s2);
+	//tab_string.push_back(s3);
+	//tab_string.push_back(s4);
+	//tab_string.push_back(s5);
+	tab_string.push_back(s6);
 
 
-	/*Forme * seg = sC->parse(s2);
-	Forme * cerc = sC->parse(s1);
-	Forme * nimpe = sC->parse(s3);*/
 
 	for (it = tab_string.begin(); it != tab_string.end(); it++){
 
@@ -145,23 +146,6 @@ int main()
 	}
 	cout << *groupe2 << endl;
 
-	//for (it2 = tab_forme.begin(); it2 != tab_forme.end(); it2++)
-	//	cout << **it2 << endl;
-
-	/*if(cerc == NULL)
-		cout << "cerc est null" << endl;
-	else
-		cout << *cerc << endl;
-
-	if(seg == NULL)
-		cout << "seg est null" << endl;
-	else
-		cout << *seg << endl;
-
-	if(nimpe == NULL)
-		cout << s3 << " : Format inadapté " << endl;
-	else
-		cout << *nimpe << endl;*/
 	return 0;
 
 }

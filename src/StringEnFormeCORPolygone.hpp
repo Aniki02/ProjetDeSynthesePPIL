@@ -1,6 +1,10 @@
 #ifndef _STRINGENFORMECORPOLYGONE_HPP
 #define _STRINGENFORMECORPOLYGONE_HPP
 
+#include "StringEnFormeCOR.hpp"
+#include <string>
+#include "Forme.hpp"
+
 class StringEnFormeCORPolygone : public StringEnFormeCOR{
 public:
 

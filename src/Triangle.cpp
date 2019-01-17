@@ -10,8 +10,7 @@ using namespace std;
 
     Triangle::operator string() const{
     	ostringstream os;
-    	os << "TRIANGLE : " << endl;
-    	os << Polygone::operator string();
+    	os << "Triangle-Couleur:"<<this->getCouleur()<<"-"<< this->getPointAt(0) << "-" << this->getPointAt(1)<<"-" << this->getPointAt(2);
 
     	return os.str();
     }

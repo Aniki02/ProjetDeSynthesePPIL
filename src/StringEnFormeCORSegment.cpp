@@ -1,22 +1,28 @@
 #include "StringEnFormeCORSegment.hpp"
 #include <vector>
 #include <string>
+#include <regex>
 #include "Segment.hpp"
+#include "Couleur.hpp"
 
 
 Forme * StringEnFormeCORSegment::parse1(const string & ligne)const{
 	
-	vector<string> ligneSplit = this->split(ligne);
-
-	if (ligneSplit[0] != "segment")
+	regex pattern{"^Segment-Couleur:\\([0-9]{1,3},[0-9]{1,3},[0-9]{1,3}\\)-\\([0-9]+,[0-9]+\\)-\\([0-9]+,[0-9]+\\)+$"};
+	if (!regex_match(ligne, pattern))
 		return NULL;
-	if (ligneSplit.size() != 6)
-		return NULL;
-	int couleur = atoi(ligneSplit[1].c_str());
-	Vecteur2D x(atof(ligneSplit[2].c_str()), atof(ligneSplit[3].c_str()));
-	Vecteur2D y(atof(ligneSplit[4].c_str()), atof(ligneSplit[5].c_str()));
+
+	vector<string> ligneSplit = this->split(ligne, '-');
+	int a, b, c, xAbcisse, xOrdonne, yAbscisse, yOrdonne;
+
+	sscanf(ligneSplit[1].c_str(), "Couleur:(%d,%d,%d)", &a, &b, &c);
+	sscanf(ligneSplit[2].c_str(),"(%d,%d)", &xAbcisse, &xOrdonne);
+	sscanf(ligneSplit[3].c_str(), "(%d,%d)", &yAbscisse, &yOrdonne);
+
+	Vecteur2D x (xAbcisse, xOrdonne);
+	Vecteur2D y (yAbscisse, yOrdonne);
 
 
-	return new Segment(couleur, x, y);
+	return new Segment(Couleur(a,b,c), x, y);
 			
 }

@@ -6,6 +6,7 @@
 #include "Vecteur2D.hpp"
 #include <iostream>
 #include <vector>
+#include "Couleur.hpp"
 
 class Vecteur2D;
 
@@ -14,7 +15,7 @@ class Polygone: public Forme{
     vector<Vecteur2D> _points;
     public :
 
-    Polygone(int c, const vector<Vecteur2D> points);
+    Polygone(Couleur c, const vector<Vecteur2D> points);
     virtual ~Polygone(){}
     Forme * clone() const{return new Polygone(*this);}
     virtual double getAir()const{return 0;}

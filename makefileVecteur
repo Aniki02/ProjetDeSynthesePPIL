@@ -1,0 +1,13 @@
+#Creation de TestVecteur.out
+CC = g++
+LINK = $(CC)
+OPTIONS = -c -Wall -std=c++11 $(INCLUDE)
+INCLUDE = -I. -Iinclude -Isrc
+all: TestVecteur.o
+	$(LINK) obj/TestVecteur.o -o bin/TestVecteur.out
+
+TestVecteur.o:
+	$(CC) $(OPTIONS) src/TestVecteur.cpp -o obj/TestVecteur.o
+
+clean: 
+	rm obj/Testvecteur.o

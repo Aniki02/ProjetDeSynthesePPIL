@@ -5,6 +5,8 @@
 #include "Forme.hpp"
 #include "Vecteur2D.hpp"
 #include <iostream>
+#include "Couleur.hpp"
+
 class Forme;
 class VisitorDessinerForme;
 class Vecteur2D;
@@ -14,7 +16,7 @@ Vecteur2D _origine;
 Vecteur2D _arrive;
 
 public :
-    Segment( int couleur, const Vecteur2D &x, const Vecteur2D &y):Forme(couleur), _origine(x), _arrive(y){}
+    Segment( Couleur couleur, const Vecteur2D &x, const Vecteur2D &y);
     virtual ~Segment(){}
     Forme * clone() const{return new Segment(*this);}
     double getAir() const {return 0;}

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-    Polygone::Polygone(int c, const vector<Vecteur2D> points):Forme(c){
+    Polygone::Polygone(Couleur c, const vector<Vecteur2D> points):Forme(c){
         vector<Vecteur2D>::const_iterator it;
         if (points.size() < 3)
             throw ("Un polygone doit etre compose de au moins 3 points");
@@ -43,11 +43,10 @@ using namespace std;
     Polygone::operator string() const{
         int i = 1;
         ostringstream os;
-        os << "POLYGONE : " << endl;
-        os << "Couleur : " << this->getCouleur();
+        os << "Polygone-NbPoint:" << this->getPoints().size() << "-Couleur:" << this->getCouleur();
         vector<Vecteur2D>::const_iterator it;
         for( it = _points.begin(); it != _points.end(); it++){
-            os << ", Point Numero " << i << ":" << *it << "   ";
+            os << "-" << *it;
             i++;
         }
 

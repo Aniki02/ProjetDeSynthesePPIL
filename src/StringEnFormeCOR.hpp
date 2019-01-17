@@ -12,6 +12,6 @@ public:
 	Forme * parse(const string & ligne)const;
 	virtual Forme * parse1(const string & ligne) const = 0;
 
-	vector<string> split(const string & ligne)const;
+	vector<string> split(const string & ligne, const char c)const;
 };
 #endif

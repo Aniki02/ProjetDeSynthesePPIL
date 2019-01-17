@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include "Couleur.hpp"
 
 using namespace std;
 
@@ -13,15 +14,14 @@ Une forme geometrique est caracterise par un couleur
 un int défini par les constantes static
 */
 class Forme{
-	int _couleur;
+	Couleur _couleur;
 public:
 	static const int BLACK = 1, BLUE = 2, RED = 3, GREEN = 4, YELLOW = 5, CYAN = 6;
-	Forme(int c);
-	virtual ~Forme();
+	Forme(Couleur c):_couleur(c){}
+	virtual ~Forme(){}
 
-	const string getCouleur() const ;
-	void setCouleur(int c);
-	int getNumeroCouleur () const {return _couleur;}
+	Couleur getCouleur() const {return _couleur;}
+	void setCouleur(Couleur c){_couleur = c;}
 
 	virtual Forme * translation (const Vecteur2D & vecTrans) = 0;
 	virtual Forme * homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie) = 0;
@@ -35,7 +35,17 @@ public:
 
 };
 
-extern ostream & operator << (ostream & , const Forme &);
+
+
+inline ostream & operator << (ostream & o , const Forme & f){
+	return o << (string)f;
+}
+
+inline ostream & operator << (ostream & o , const Forme * f){
+	return o << *f;
+}
+
+
 
 
 

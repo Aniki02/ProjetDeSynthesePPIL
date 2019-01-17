@@ -4,19 +4,25 @@
 
 using namespace std;
 
+
+    Cercle::Cercle(Couleur couleur, Vecteur2D centre, double r):Forme(couleur), _centre(centre){
+        if (r <= 0)
+            throw ("Le rayon doit etre superieur a 0");
+        _rayon = r;
+    }
     double Cercle::getAir()const{
         return 3.14 * getRayon() * getRayon();
     }
     Forme * Cercle::translation (const Vecteur2D & vecTrans){
-        //TODO
+        //return new Cercle(this->getNumeroCouleur(), _centre.translation(vecTrans), _rayon);
         return NULL;
     }
 	Forme * Cercle::homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie){
-        //TODO
+        //return new Cercle (this->getNumeroCouleur(), _centre, _rayon *= rapportHomothetie );
         return NULL;
     }
     Forme * Cercle::rotation (const Vecteur2D & pInvariant, double radiant){
-        //TODO
+        //return new Cercle(this->getNumeroCouleur(), _centre.rotation(pInvariant, radiant), _rayon);
         return NULL;
     }
 	void Cercle::accepteDessin(VisitorDessinerForme * v) const {
@@ -24,7 +30,6 @@ using namespace std;
     }
     Cercle::operator string() const{
     ostringstream os;
-    os << "CERCLE" << endl;
-	os << "Couleur : " << this->getCouleur() << ", Centre " << _centre <<",  Rayon : " << _rayon << ")";
+    os << "Cercle-Couleur:" << this->getCouleur() << "-Centre" << this->getCentre() <<"-Rayon:" << this->getRayon();
 	return os.str();
     }

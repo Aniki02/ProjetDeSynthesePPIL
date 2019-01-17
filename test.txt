@@ -1,0 +1,6 @@
+Cercle-Couleur:(0,0,0)-Centre(10,10)-Rayon:10
+Segment-Couleur:(30,150,200)-(10,10)-(30,30)
+blablabla
+Polygone-NbPoints:4-Couleur:3-(10,10)-(30,30)-(40,40)-(50,50)
+Triangle-Couleur:(40,50,18)-(10,10)-(10,30)-(30,10)
+Groupe-Couleur:3[Triangle-Couleur:4-(10,10)-(10,30)-(30,10)|Segment-Couleur:(255,255,255)-(10,10)-(30,30)|Cercle-Couleur:1-Centre(10,10)-Rayon:10|]

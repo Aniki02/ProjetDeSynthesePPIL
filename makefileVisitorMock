@@ -1,0 +1,27 @@
+#Creation de TestVisitorMock.out
+CC = g++
+LINK = $(CC)
+OPTIONS = -c -Wall -std=c++11 $(INCLUDE)
+INCLUDE = -I. -Iinclude -Isrc
+all: TestVisitorMock.o Forme.o Segment.o Cercle.o Groupe.o Polygone.o Triangle.o VisitorMock.o
+	$(LINK) obj/Forme.o obj/Segment.o obj/Cercle.o obj/Groupe.o obj/Polygone.o obj/Triangle.o obj/TestVisitorMock.o obj/VisitorMock.o -o bin/TestVisitorMock.out
+
+TestVisitorMock.o:
+	$(CC) $(OPTIONS) src/TestVisitorMock.cpp -o obj/TestVisitorMock.o
+Forme.o:
+	$(CC) $(OPTIONS) src/Forme.cpp -o obj/Forme.o
+Segment.o:
+	$(CC) $(OPTIONS) src/Segment.cpp -o obj/Segment.o
+Cercle.o:
+	$(CC) $(OPTIONS) src/Cercle.cpp -o obj/Cercle.o
+Groupe.o:
+	$(CC) $(OPTIONS) src/Groupe.cpp -o obj/Groupe.o
+Polygone.o:
+	$(CC) $(OPTIONS) src/Polygone.cpp -o obj/Polygone.o
+Triangle.o:
+	$(CC) $(OPTIONS) src/Triangle.cpp -o obj/Triangle.o
+VisitorMock.o:
+	$(CC) $(OPTIONS) src/VisitorMock.cpp -o obj/VisitorMock.o
+
+clean: 
+	rm obj/TestVisitorMock.o
