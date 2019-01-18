@@ -10,10 +10,10 @@
 
 class VisitorDessinerForme{
 public:
-	virtual void visite(const Segment * segment) const = 0;
-	virtual void visite(const Cercle * cercle) const = 0;
-	virtual void visite(const Polygone * polygone) const = 0;
-	virtual void visite(const Triangle * triangle) const = 0;
+	virtual void visite(const Segment * segment) = 0;
+	virtual void visite(const Cercle * cercle) = 0;
+	virtual void visite(const Polygone * polygone) = 0;
+	virtual void visite(const Triangle * triangle) = 0;
 	virtual void visite(const Groupe * groupe) = 0;
 
 };

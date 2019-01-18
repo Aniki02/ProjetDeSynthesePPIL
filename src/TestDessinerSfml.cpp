@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <vector>
+#include <SFML/Graphics.hpp>
 
 #include "Vecteur2D.hpp"
 #include "Forme.hpp"
@@ -17,65 +18,39 @@ using namespace std;
 
 int main()
 {
-    Couleur Rouge(255,0,0);
-    Couleur Vert(0, 250, 0);
-    Couleur Blanc(0,0,0);
-    Couleur Bleu(0,0,255);
-    Couleur Noir(255,255,255);
-
-    //-----------------------TEST DESSINER FORME SFML------------------------------//*/
-
-    //Création des vecteurs
-    Vecteur2D v2(10,20), u10(50,30), i2(40,40),j2(6,4);
-    Vecteur2D  u(5,3), i(4,4),j(6,4);
-    Vecteur2D y2(60,80);
+    //creation fentetre
+    DessinerSFML * visiteur = new DessinerSFML("ma Fenetre", 800, 800);
+    //creation des forme
+    Forme * s = new Segment(Couleur(0,255,0), Vecteur2D(10,10), Vecteur2D(700,700));
+    Forme * s1 = new Segment(Couleur(0,255,0), Vecteur2D(700,200), Vecteur2D(10,100));
+    Forme * s2 = new Segment(Couleur(255,0,0), Vecteur2D(300,200), Vecteur2D(800,100));
+    Forme * c = new Cercle(Couleur(0,0,255), Vecteur2D(400,200), 100);
+    Forme * p = new Polygone(Couleur(0,255,255), {Vecteur2D(20,20), Vecteur2D(20,100), Vecteur2D(100,100), Vecteur2D(100,20)});
+    Forme * t = new Triangle(Couleur(100,100,100), {Vecteur2D(200,200), Vecteur2D(200,500), Vecteur2D(500,500)});
     
-    // Création des vectors pour triangle et polygone
-    vector<Vecteur2D> vecP;
-    vecP.push_back(v2);
-    vecP.push_back(u10);
-    vecP.push_back(i2);
-    vecP.push_back(j2);
-    vecP.push_back(u);
+    Groupe * g = new Groupe(Couleur(100,200,0));
+    g->addForme(s);
+    g->addForme(s1);
+    g->addForme(s2);
+    g->addForme(c);
+    g->addForme(p);
+    g->addForme(t);
 
-    vector<Vecteur2D> vecT;
-    vecT.push_back(v2);
-    vecT.push_back(u10);
-    vecT.push_back(i2);
+    g->accepteDessin(visiteur);
 
+    // s->accepteDessin(visiteur);
+    // s1->accepteDessin(visiteur);
+    // s2->accepteDessin(visiteur);
+    //c->accepteDessin(visiteur);
+    // Forme * c2 = c->homothetie(Vecteur2D(100,100), 2);
+    // c2->accepteDessin(visiteur);
+    // p->accepteDessin(visiteur);
+    // t->accepteDessin(visiteur);
 
-   // Initialisation des formes simples
-    Forme * p = new Polygone(Rouge,vecP);
-    Forme * s = new Segment(Vert,u,u10);
-    Forme * t = new Triangle(Rouge,vecT);
-    Forme * c = new Cercle(Vert,y2,5);
+    visiteur->run();
 
-    // Initialisation du groupe de forme
-    Forme * tG = new Triangle(Rouge, vecT);
-    Forme * cG = new Cercle(Vert,y2,50);
-    Forme * sG = new Segment(Rouge, v2, u10);
-    Forme * pG = new Polygone(Vert,vecP);
-    Groupe * g = new Groupe(Rouge);
-
-
-    g->addForme(tG);
-    g->addForme(cG);
-    g->addForme(sG);
-    g->addForme(pG);
-    
-    
-    // Lancement du dessin
-
-    VisitorDessinerForme * visiteuse = new DessinerSFML();
-    t->accepteDessin(visiteuse);
-    s->accepteDessin(visiteuse);
-    p->accepteDessin(visiteuse);
-    c->accepteDessin(visiteuse);
-
-    g->accepteDessin(visiteuse);
     
 
-    // }
     return 0;
 
 }
