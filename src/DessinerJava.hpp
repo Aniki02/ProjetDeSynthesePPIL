@@ -5,7 +5,7 @@
 *	\brief Permet de dessiner a l'aide d'une librairie JAVA
 */
 #include "VisitorDessinerForme.hpp"
-
+#include "ClientDessin.hpp"
 
 /**
 *	\class DessinerJava
@@ -41,7 +41,7 @@ class DessinerJava : public VisitorDessinerForme{
 	*	\brief Dessine un groupe
 	*	\param segment : le groupe a dessiner 
 	*/
-	void visite(const Groupe * groupe) const;
+	void visite(const Groupe * groupe);
 	
 
 };
