@@ -1,5 +1,6 @@
 #ifndef Triangle_hpp
 #define Triangle_hpp
+
 #include <stdio.h>
 #include "Forme.hpp"
 #include "Vecteur2D.hpp"

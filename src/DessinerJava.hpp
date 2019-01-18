@@ -41,7 +41,7 @@ class DessinerJava : public VisitorDessinerForme{
 	*	\brief Dessine un groupe
 	*	\param segment : le groupe a dessiner 
 	*/
-	void visite(const Groupe * groupe) const;
+	void visite(const Groupe * groupe) ;
 	
 
 };
