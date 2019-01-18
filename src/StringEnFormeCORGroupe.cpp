@@ -15,7 +15,7 @@
 
 Forme * StringEnFormeCORGroupe::parse1(const string & ligne)const{
 	
-	regex pattern{"^Groupe-Couleur:[0-9]+\\[.*\\]$"};
+	regex pattern{"^Groupe-Couleur:\\([0-9]{1,3},[0-9]{1,3},[0-9]{1,3}\\)+\\[.*\\]$"};
 	if (!regex_match(ligne, pattern)){
 		return NULL;
 	}

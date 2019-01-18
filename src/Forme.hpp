@@ -1,6 +1,9 @@
 #ifndef _FORME_HPP
 #define _FORME_HPP
-
+/**
+*	\file Forme.hpp
+*	\brief Represente une forme geometrique
+*/
 #include <stdio.h>
 #include <iostream>
 #include "Couleur.hpp"
@@ -9,18 +12,34 @@ using namespace std;
 
 class Vecteur2D;
 class VisitorDessinerForme;
+
 /**
-Une forme geometrique est caracterise par un couleur
-un int défini par les constantes static
+*	\class Forme
+*	\brief Une forme geometrique est caracterise par un couleur
 */
 class Forme{
 	Couleur _couleur;
 public:
-	static const int BLACK = 1, BLUE = 2, RED = 3, GREEN = 4, YELLOW = 5, CYAN = 6;
+
+	/**
+	*	\brief Constructeur
+	*	\param c : Couleur de la forme 
+	*/
 	Forme(Couleur c):_couleur(c){}
+
+	/*
+	*	\brief Destructeur
+	*/
 	virtual ~Forme(){}
 
+	/**
+	*	\brief Return la couleur
+	*/
 	Couleur getCouleur() const {return _couleur;}
+
+	/**
+	*	\brief Change la couleur
+	*/
 	void setCouleur(Couleur c){_couleur = c;}
 
 	virtual Forme * translation (const Vecteur2D & vecTrans) = 0;

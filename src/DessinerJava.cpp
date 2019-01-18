@@ -14,3 +14,6 @@ void DessinerJava::visite(const Polygone * polygone) const{
 void DessinerJava::visite(const Triangle * triangle) const{
 	//TODO
 }
+void DessinerJava::visite(const Groupe * groupe) const{
+	//TODO
+}

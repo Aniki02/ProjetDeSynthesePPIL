@@ -15,22 +15,22 @@ using namespace std;
     	v->visite(this);
     }
 
-	/*Forme * Segment::clone() const {
-	return new Segment(*this);
-	}*/
     Forme * Segment::translation (const Vecteur2D & vecTrans){
-    	//TODO
-    	return NULL;
+    	Vecteur2D ori = getOrigine() + vecTrans;
+    	Vecteur2D ari = getArrive() + vecTrans;
+        return new Segment(getCouleur(),ori, ari);
     }
 
 	Forme * Segment::homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie){
-		//TODO
-		return NULL;
+		Vecteur2D ori = (getOrigine() - pInvariant) * rapportHomothetie;
+		Vecteur2D ar = (getArrive() - pInvariant) * rapportHomothetie;
+        return new Segment(getCouleur(), ori, ar);
 	}
 
 	Forme * Segment::rotation (const Vecteur2D & pInvariant, double radiant){
-		//TODO
-		return NULL;
+		Vecteur2D ori = getOrigine().rotation(pInvariant, radiant);
+		Vecteur2D ar = getArrive().rotation(pInvariant, radiant);
+        return new Segment(getCouleur(),ori,ar);
 	}
 
 	Segment::operator string() const{

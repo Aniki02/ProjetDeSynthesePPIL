@@ -14,16 +14,17 @@ using namespace std;
         return 3.14 * getRayon() * getRayon();
     }
     Forme * Cercle::translation (const Vecteur2D & vecTrans){
-        //return new Cercle(this->getNumeroCouleur(), _centre.translation(vecTrans), _rayon);
-        return NULL;
+        Vecteur2D centre = getCentre() + vecTrans;
+        return new Cercle(getCouleur(),centre,getRayon());
     }
 	Forme * Cercle::homothetie (const Vecteur2D & pInvariant, const double & rapportHomothetie){
-        //return new Cercle (this->getNumeroCouleur(), _centre, _rayon *= rapportHomothetie );
-        return NULL;
+        double rayon = getRayon() * rapportHomothetie;
+        Vecteur2D v = (getCentre() - pInvariant) * rapportHomothetie;
+        return new Cercle(getCouleur(), v, rayon);
     }
     Forme * Cercle::rotation (const Vecteur2D & pInvariant, double radiant){
-        //return new Cercle(this->getNumeroCouleur(), _centre.rotation(pInvariant, radiant), _rayon);
-        return NULL;
+        Vecteur2D v = getCentre().rotation(pInvariant, radiant);
+        return new Cercle(getCouleur(),v,getRayon());
     }
 	void Cercle::accepteDessin(VisitorDessinerForme * v) const {
         v->visite(this);

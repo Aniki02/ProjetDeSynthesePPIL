@@ -11,7 +11,9 @@ Groupe::Groupe(const Groupe & g): Forme(g.getCouleur()){
 		_groupe.push_back((*it)->clone());
 }
 Groupe::~Groupe(){
-	//TODO
+	vector<Forme *>::iterator it;
+	for(it = _groupe.begin(); it != _groupe.end(); it++)
+		delete *it;
 }
 
 /**

@@ -29,6 +29,7 @@ int main()
     Vecteur2D v2(10,20), u10(50,30), i2(40,40),j2(6,4);
     Vecteur2D  u(5,3), i(4,4),j(6,4);
     Vecteur2D y2(60,80);
+    
     // Création des vectors pour triangle et polygone
     vector<Vecteur2D> vecP;
     vecP.push_back(v2);

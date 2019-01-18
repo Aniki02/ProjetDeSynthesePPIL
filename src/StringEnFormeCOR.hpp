@@ -1,10 +1,18 @@
 #ifndef _STRINGENFRACTIONCOR_HPP
 #define _STRINGENFRACTIONCOR_HPP
+/**
+*	\file StringEnFormeCOR.hpp
+*	\brief Permet de creer une chaine de responsabilité pour parser un string en forme
+*/
 #include "StringEnForme.hpp"
 #include <vector>
 #include <string>
 
 
+/**
+*	\class StringEnFormeCOR
+*	\brief Permet de creer une chaine de responsabilité pour parser un string en forme
+*/
 class StringEnFormeCOR : public StringEnForme{
 	StringEnFormeCOR * _suivant;
 public: 

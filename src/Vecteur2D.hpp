@@ -29,16 +29,18 @@ public:
 	void setX(const double x){_x = x;}
 	void setY(const double y){_y = y;}
 
-	// void translation(const Vecteur2D &vecteur){*this = *this + vecteur;}
-	// void homothetie(const double nombre){_x *= nombre; _y *= nombre;}
-	// void rotation(const double degre, const Vecteur2D &vecteur_centre){
-	// 	double	x = _x - vecteur_centre.getX(),
-	// 			y = _y - vecteur_centre.getY(),
-	// 			r = degre * PI / 180.0;
+	double Distance(const Vecteur2D &v)const{
+		return sqrt(pow(_x - v._x, 2) + pow(_y - _y, 2));
+	}
 	
-	// 	_x = vecteur_centre.getX() + x * cos(r) - y * sin(r);
-	// 	_y = vecteur_centre.getY() + x * sin(r) + y * cos(r);
-	// }
+    Vecteur2D rotation(const Vecteur2D & pInvariant, double radiant){
+    	double  x = _x - pInvariant._x;
+      	double  y = _y - pInvariant._y;
+
+    	x = pInvariant._x + x * cos(radiant) - y *sin(radiant);
+    	y = pInvariant._y + x * sin(radiant) + y *cos(radiant);
+   		return Vecteur2D(x,y);
+    }
 
 	const Vecteur2D operator *(const double &) const;
 	const Vecteur2D operator - () const{return Vecteur2D(-_x,-_y);}
