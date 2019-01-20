@@ -8,17 +8,17 @@ import java.awt.image.BufferStrategy;
 
 public class Fenetre extends Frame{
 	/**
-	 * 
+	 * <b>la Fenêtre sur la quelle on dessine elle extends la class Frame</b>
 	 */
 	private static final long serialVersionUID = 1L;
 	public Graphics graphics;      // pour dessiner sur this
 	public BufferStrategy strategie;
 	/**
-	 * @param titre : titre de la fenêtre
-	 * @param ox : abscisse souhaité pour le bord gauche de la fenêtre
-	 * @param oy : ordonnée souhaitée pour le bord supérieur de la fenêtre
-	 * @param largeur : largeur souhaitée pour la fenêtre
-	 * @param hauteur : hauteur souhaitée pour la fenêtre
+	 * @param titre  titre de la fenêtre
+	 * @param ox  abscisse souhaité pour le bord gauche de la fenêtre
+	 * @param oy  ordonnée souhaitée pour le bord supérieur de la fenêtre
+	 * @param largeur  largeur souhaitée pour la fenêtre
+	 * @param hauteur  hauteur souhaitée pour la fenêtre
 	 * 
 	 * l'unité pour ces 4 paramètres est le pixel 
 	 * 
@@ -48,7 +48,5 @@ public class Fenetre extends Frame{
 		int nombreBuffers = 1;
 		 this.createBufferStrategy(nombreBuffers);
 		Thread.sleep(200);   
-		//this.strategie= this.getBufferStrategy();
-		//this.graphics =this.strategie.getDrawGraphics();
 	}
 }
