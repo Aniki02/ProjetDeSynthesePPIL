@@ -11,6 +11,7 @@
 
 
 void DessinerSFML::visite(const Segment * segment){
+    //Construction d'un segment en sfml 
     sf::Vertex line[] =
     {
     sf::Vertex(sf::Vector2f(segment->getArrive()._x, segment->getArrive()._y),sf::Color((segment->getCouleur()).getCouleur1(),
@@ -21,6 +22,7 @@ void DessinerSFML::visite(const Segment * segment){
                                                                                         (segment->getCouleur()).getCouleur3()))
     };
 
+    //Dessin du segment dans la fenetre 
     window.draw(line, 2, sf::Lines);
 }
 
