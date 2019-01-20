@@ -1,0 +1,200 @@
+\hypertarget{class_cercle}{}\section{Cercle Class Reference}
+\label{class_cercle}\index{Cercle@{Cercle}}
+
+
+classe representant un cercle  
+
+
+
+
+{\ttfamily \#include $<$Cercle.\+hpp$>$}
+
+Inheritance diagram for Cercle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cercle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cercle_a581cf3e50c4c61f98260340a7e30903f}{Cercle}} (\mbox{\hyperlink{class_couleur}{Couleur}} couleur, \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} centre, double r)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cercle_a8749eabc689e99c4739b332712791997}\label{class_cercle_a8749eabc689e99c4739b332712791997}} 
+virtual \mbox{\hyperlink{class_cercle_a8749eabc689e99c4739b332712791997}{$\sim$\+Cercle}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cercle_aa644716a1b2c435a6d64a7fdbcf9b987}\label{class_cercle_aa644716a1b2c435a6d64a7fdbcf9b987}} 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_cercle_aa644716a1b2c435a6d64a7fdbcf9b987}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Return un clone du cercle Return un pointeur sur un nouveau cercle créer avec le cercle courant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cercle_aae89902987377c17a3488043ccd8adf5}\label{class_cercle_aae89902987377c17a3488043ccd8adf5}} 
+double \mbox{\hyperlink{class_cercle_aae89902987377c17a3488043ccd8adf5}{get\+Air}} () const
+\begin{DoxyCompactList}\small\item\em Return l\textquotesingle{}air du cercle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cercle_afbf26df611767f7b1cc22904fd844932}\label{class_cercle_afbf26df611767f7b1cc22904fd844932}} 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_cercle_afbf26df611767f7b1cc22904fd844932}{get\+Centre}} () const
+\begin{DoxyCompactList}\small\item\em Return le centre du cercle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}\label{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}} 
+double \mbox{\hyperlink{class_cercle_abc1c953fd5ef431158e89dc8344b1de1}{get\+Rayon}} () const
+\begin{DoxyCompactList}\small\item\em Return le rayon du cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_aa445da0cb6b4aa420b4b6e128a432f41}{set\+Centre}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)
+\begin{DoxyCompactList}\small\item\em Change le centre du cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_a41a16acfa3c2ddeb029c117ca3c2fd34}{set\+Rayon}} (double r)
+\begin{DoxyCompactList}\small\item\em Change le rayon du cercle. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_cercle_a5ba23911b0cc2601c06e7397d409406d}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vec\+Trans)
+\begin{DoxyCompactList}\small\item\em Deplace le cercle par rapport a un vecteur. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_cercle_a75b80b076c0f27a52a326213a4d92349}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, const double \&rapport\+Homothetie)
+\begin{DoxyCompactList}\small\item\em Effectue une homotehie sur le cercle effectue une transformation qui fais correspondre tout point par rapport a un point invariant et un rapport. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_cercle_af9e9abb354ac250e94d42dd46ef6eafa}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, double radiant)
+\begin{DoxyCompactList}\small\item\em effectue une rotation sur le cercle Effectue une rotation du cercle autour d\textquotesingle{}un point Invariant \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cercle_afb719f00d2e1881449997816263b748a}{accepte\+Dessin}} (\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Dessine le cercle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}\label{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}} 
+virtual \mbox{\hyperlink{class_cercle_a01dfce2b49afb0dcb5bd176d4145b71a}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em Convertit la forme en string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+classe representant un cercle 
+
+La classe \mbox{\hyperlink{class_cercle}{Cercle}} represente un cercle et possede des methode pour transformer le cercle 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_cercle_a581cf3e50c4c61f98260340a7e30903f}\label{class_cercle_a581cf3e50c4c61f98260340a7e30903f}} 
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\index{Cercle@{Cercle}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{Cercle()}{Cercle()}}
+{\footnotesize\ttfamily Cercle\+::\+Cercle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_couleur}{Couleur}}}]{couleur,  }\item[{\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}}]{centre,  }\item[{double}]{r }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+Constructeur de la classe \mbox{\hyperlink{class_cercle}{Cercle}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & \+: couleur de la forme \\
+\hline
+{\em centre} & \+: \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} qui represente le centre du cercle \\
+\hline
+{\em r} & \+: le rayon du cercle \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cercle_afb719f00d2e1881449997816263b748a}\label{class_cercle_afb719f00d2e1881449997816263b748a}} 
+\index{Cercle@{Cercle}!accepteDessin@{accepteDessin}}
+\index{accepteDessin@{accepteDessin}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{accepteDessin()}{accepteDessin()}}
+{\footnotesize\ttfamily void Cercle\+::accepte\+Dessin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine le cercle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: Le visiteur\+Dessin de la libairie avec laquelle le cercle doit etre dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_a75b80b076c0f27a52a326213a4d92349}\label{class_cercle_a75b80b076c0f27a52a326213a4d92349}} 
+\index{Cercle@{Cercle}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Cercle\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{const double \&}]{rapport\+Homothetie }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Effectue une homotehie sur le cercle effectue une transformation qui fais correspondre tout point par rapport a un point invariant et un rapport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: point invariant \\
+\hline
+{\em rapport\+Homotehie} & \+: rapport d\textquotesingle{}homotethie \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_af9e9abb354ac250e94d42dd46ef6eafa}\label{class_cercle_af9e9abb354ac250e94d42dd46ef6eafa}} 
+\index{Cercle@{Cercle}!rotation@{rotation}}
+\index{rotation@{rotation}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Cercle\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{double}]{radiant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+effectue une rotation sur le cercle Effectue une rotation du cercle autour d\textquotesingle{}un point Invariant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: Point invariant autour du quelle le cercle va tourner \\
+\hline
+{\em radiant} & \+: l\textquotesingle{}angle de rotation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_cercle_aa445da0cb6b4aa420b4b6e128a432f41}\label{class_cercle_aa445da0cb6b4aa420b4b6e128a432f41}} 
+\index{Cercle@{Cercle}!setCentre@{setCentre}}
+\index{setCentre@{setCentre}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{setCentre()}{setCentre()}}
+{\footnotesize\ttfamily void Cercle\+::set\+Centre (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change le centre du cercle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: vecteur du nouveau centre \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_a41a16acfa3c2ddeb029c117ca3c2fd34}\label{class_cercle_a41a16acfa3c2ddeb029c117ca3c2fd34}} 
+\index{Cercle@{Cercle}!setRayon@{setRayon}}
+\index{setRayon@{setRayon}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{setRayon()}{setRayon()}}
+{\footnotesize\ttfamily void Cercle\+::set\+Rayon (\begin{DoxyParamCaption}\item[{double}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change le rayon du cercle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & nouveau rayon \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_cercle_a5ba23911b0cc2601c06e7397d409406d}\label{class_cercle_a5ba23911b0cc2601c06e7397d409406d}} 
+\index{Cercle@{Cercle}!translation@{translation}}
+\index{translation@{translation}!Cercle@{Cercle}}
+\subsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Cercle\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vec\+Trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deplace le cercle par rapport a un vecteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+Trans} & \+: le vecteur qui \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cercle_8hpp}{Cercle.\+hpp}}\item 
+Cercle.\+cpp\end{DoxyCompactItemize}

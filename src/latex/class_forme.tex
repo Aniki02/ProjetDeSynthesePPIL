@@ -1,0 +1,77 @@
+\hypertarget{class_forme}{}\section{Forme Class Reference}
+\label{class_forme}\index{Forme@{Forme}}
+
+
+Une forme geometrique est caracterise par un couleur.  
+
+
+
+
+{\ttfamily \#include $<$Forme.\+hpp$>$}
+
+Inheritance diagram for Forme\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_forme}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_forme_a009ca469830cd3e0c622c2bd446d374b}{Forme}} (\mbox{\hyperlink{class_couleur}{Couleur}} c)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_forme_a4fb5ac9b55ecb4af4ceeb05aeb618873}\label{class_forme_a4fb5ac9b55ecb4af4ceeb05aeb618873}} 
+\mbox{\hyperlink{class_couleur}{Couleur}} \mbox{\hyperlink{class_forme_a4fb5ac9b55ecb4af4ceeb05aeb618873}{get\+Couleur}} () const
+\begin{DoxyCompactList}\small\item\em Return la couleur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_forme_a4ac59817d48d339134957a35f5b5cff9}\label{class_forme_a4ac59817d48d339134957a35f5b5cff9}} 
+void \mbox{\hyperlink{class_forme_a4ac59817d48d339134957a35f5b5cff9}{set\+Couleur}} (\mbox{\hyperlink{class_couleur}{Couleur}} c)
+\begin{DoxyCompactList}\small\item\em Change la couleur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_forme_a0cd165ab7f0cf8b3411780ac7455b2e6}\label{class_forme_a0cd165ab7f0cf8b3411780ac7455b2e6}} 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ {\bfseries translation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vec\+Trans)=0
+\item 
+\mbox{\Hypertarget{class_forme_a657b8eb12905a4a12af0aa00508afcc1}\label{class_forme_a657b8eb12905a4a12af0aa00508afcc1}} 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ {\bfseries homothetie} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, const double \&rapport\+Homothetie)=0
+\item 
+\mbox{\Hypertarget{class_forme_ae8b1eacae70974e1ca8fb048652b9306}\label{class_forme_ae8b1eacae70974e1ca8fb048652b9306}} 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ {\bfseries rotation} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, double radiant)=0
+\item 
+\mbox{\Hypertarget{class_forme_a8ec63ed6dead93c1c6c9239005895659}\label{class_forme_a8ec63ed6dead93c1c6c9239005895659}} 
+virtual double {\bfseries get\+Air} () const =0
+\item 
+\mbox{\Hypertarget{class_forme_a226750dc3f772514fe58e1dc16f3d0d5}\label{class_forme_a226750dc3f772514fe58e1dc16f3d0d5}} 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ {\bfseries clone} () const =0
+\item 
+\mbox{\Hypertarget{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}\label{class_forme_a6ad05e3231b6753d2133ca5438e0feeb}} 
+virtual {\bfseries operator string} () const =0
+\item 
+\mbox{\Hypertarget{class_forme_aa687a4604068cf3181f8b8920ded5d61}\label{class_forme_aa687a4604068cf3181f8b8920ded5d61}} 
+virtual void {\bfseries accepte\+Dessin} (\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$v) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Une forme geometrique est caracterise par un couleur. 
+
+represente une forme 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_forme_a009ca469830cd3e0c622c2bd446d374b}\label{class_forme_a009ca469830cd3e0c622c2bd446d374b}} 
+\index{Forme@{Forme}!Forme@{Forme}}
+\index{Forme@{Forme}!Forme@{Forme}}
+\subsubsection{\texorpdfstring{Forme()}{Forme()}}
+{\footnotesize\ttfamily Forme\+::\+Forme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_couleur}{Couleur}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \+: \mbox{\hyperlink{class_couleur}{Couleur}} de la forme \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_forme_8hpp}{Forme.\+hpp}}\end{DoxyCompactItemize}

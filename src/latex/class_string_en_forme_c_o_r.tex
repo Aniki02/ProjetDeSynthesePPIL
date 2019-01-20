@@ -1,0 +1,95 @@
+\hypertarget{class_string_en_forme_c_o_r}{}\section{String\+En\+Forme\+C\+OR Class Reference}
+\label{class_string_en_forme_c_o_r}\index{StringEnFormeCOR@{StringEnFormeCOR}}
+
+
+Permet de creer une chaine de responsabilité pour parser un string en forme.  
+
+
+
+
+{\ttfamily \#include $<$String\+En\+Forme\+C\+O\+R.\+hpp$>$}
+
+Inheritance diagram for String\+En\+Forme\+C\+OR\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.826087cm]{class_string_en_forme_c_o_r}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_string_en_forme_c_o_r_a5fc0f41132d65a076009ddc5c4a8b1ee}{String\+En\+Forme\+C\+OR}} (\mbox{\hyperlink{class_string_en_forme_c_o_r}{String\+En\+Forme\+C\+OR}} $\ast$suivant)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_string_en_forme_c_o_r_ab0b1d2efc8fdcf027cbc7241c498a024}{parse}} (const string \&ligne) const
+\begin{DoxyCompactList}\small\item\em parse une ligne et renvoi une forme \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_string_en_forme_c_o_r_a11d62ec377d6f255ae7265c4bb6ea1e5}\label{class_string_en_forme_c_o_r_a11d62ec377d6f255ae7265c4bb6ea1e5}} 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ {\bfseries parse1} (const string \&ligne) const =0
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_string_en_forme_c_o_r_aa184a9544ad408ee03ccb0cae5b742e4}{split}} (const string \&ligne, const char c) const
+\begin{DoxyCompactList}\small\item\em split un string par rapport a un caractere Split par un string par rapport a un caractere et le stock dans un tableau qu\textquotesingle{}il retourne \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Permet de creer une chaine de responsabilité pour parser un string en forme. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_string_en_forme_c_o_r_a5fc0f41132d65a076009ddc5c4a8b1ee}\label{class_string_en_forme_c_o_r_a5fc0f41132d65a076009ddc5c4a8b1ee}} 
+\index{StringEnFormeCOR@{StringEnFormeCOR}!StringEnFormeCOR@{StringEnFormeCOR}}
+\index{StringEnFormeCOR@{StringEnFormeCOR}!StringEnFormeCOR@{StringEnFormeCOR}}
+\subsubsection{\texorpdfstring{StringEnFormeCOR()}{StringEnFormeCOR()}}
+{\footnotesize\ttfamily String\+En\+Forme\+C\+O\+R\+::\+String\+En\+Forme\+C\+OR (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_string_en_forme_c_o_r}{String\+En\+Forme\+C\+OR}} $\ast$}]{suivant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em suivant} & \+: pointeur sur le suivant de la chaine de reponsabilite \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_string_en_forme_c_o_r_ab0b1d2efc8fdcf027cbc7241c498a024}\label{class_string_en_forme_c_o_r_ab0b1d2efc8fdcf027cbc7241c498a024}} 
+\index{StringEnFormeCOR@{StringEnFormeCOR}!parse@{parse}}
+\index{parse@{parse}!StringEnFormeCOR@{StringEnFormeCOR}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ String\+En\+Forme\+C\+O\+R\+::parse (\begin{DoxyParamCaption}\item[{const string \&}]{ligne }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+parse une ligne et renvoi une forme 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & \+: ligne a parser \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_string_en_forme_a9bc80e648471ed76fec821b8895d41d9}{String\+En\+Forme}}.
+
+\mbox{\Hypertarget{class_string_en_forme_c_o_r_aa184a9544ad408ee03ccb0cae5b742e4}\label{class_string_en_forme_c_o_r_aa184a9544ad408ee03ccb0cae5b742e4}} 
+\index{StringEnFormeCOR@{StringEnFormeCOR}!split@{split}}
+\index{split@{split}!StringEnFormeCOR@{StringEnFormeCOR}}
+\subsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily vector$<$ string $>$ String\+En\+Forme\+C\+O\+R\+::split (\begin{DoxyParamCaption}\item[{const string \&}]{ligne,  }\item[{const char}]{c }\end{DoxyParamCaption}) const}
+
+
+
+split un string par rapport a un caractere Split par un string par rapport a un caractere et le stock dans un tableau qu\textquotesingle{}il retourne 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & \+: ligne a spliter \\
+\hline
+{\em c} & \+: caractere de separation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_string_en_forme_c_o_r_8hpp}{String\+En\+Forme\+C\+O\+R.\+hpp}}\item 
+String\+En\+Forme\+C\+O\+R.\+cpp\end{DoxyCompactItemize}

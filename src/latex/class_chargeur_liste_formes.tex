@@ -1,0 +1,35 @@
+\hypertarget{class_chargeur_liste_formes}{}\section{Chargeur\+Liste\+Formes Class Reference}
+\label{class_chargeur_liste_formes}\index{ChargeurListeFormes@{ChargeurListeFormes}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const vector$<$ \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ \mbox{\hyperlink{class_chargeur_liste_formes_aeaa4ce4978853f8ceedbc12606fb8db2}{charge}} (ifstream \&texte, const \mbox{\hyperlink{class_string_en_forme}{String\+En\+Forme}} $\ast$string\+En\+Forme)
+\begin{DoxyCompactList}\small\item\em Lis un fichier et transforme chaque ligne en \mbox{\hyperlink{class_forme}{Forme}} $\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_chargeur_liste_formes_aeaa4ce4978853f8ceedbc12606fb8db2}\label{class_chargeur_liste_formes_aeaa4ce4978853f8ceedbc12606fb8db2}} 
+\index{ChargeurListeFormes@{ChargeurListeFormes}!charge@{charge}}
+\index{charge@{charge}!ChargeurListeFormes@{ChargeurListeFormes}}
+\subsubsection{\texorpdfstring{charge()}{charge()}}
+{\footnotesize\ttfamily const vector$<$ \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ Chargeur\+Liste\+Formes\+::charge (\begin{DoxyParamCaption}\item[{ifstream \&}]{texte,  }\item[{const \mbox{\hyperlink{class_string_en_forme}{String\+En\+Forme}} $\ast$}]{string\+En\+Forme }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lis un fichier et transforme chaque ligne en \mbox{\hyperlink{class_forme}{Forme}} $\ast$. 
+
+donc pour chaque ligne la methode envoi la ligne au parseur qui renvoi un \mbox{\hyperlink{class_forme}{Forme}} $\ast$ et l\textquotesingle{}ajoute au vector . si \mbox{\hyperlink{class_forme}{Forme}} $\ast$ = N\+U\+LL alors on l\textquotesingle{}ignore retourne le vetor a la fin
+
+
+\begin{DoxyParams}{Parameters}
+{\em string\+En\+Forme} & \+: la chaine de responsabilité qui tranforme un string en \mbox{\hyperlink{class_forme}{Forme}} \\
+\hline
+{\em texte} & \+: fichier ouvert en lecture \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_chargeur_liste_formes_8hpp}{Chargeur\+Liste\+Formes.\+hpp}}\item 
+Chargeur\+Liste\+Formes.\+cpp\end{DoxyCompactItemize}

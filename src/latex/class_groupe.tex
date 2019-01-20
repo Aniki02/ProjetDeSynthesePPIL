@@ -1,0 +1,230 @@
+\hypertarget{class_groupe}{}\section{Groupe Class Reference}
+\label{class_groupe}\index{Groupe@{Groupe}}
+
+
+Represente un groupe de forme.  
+
+
+
+
+{\ttfamily \#include $<$Groupe.\+hpp$>$}
+
+Inheritance diagram for Groupe\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_groupe}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_groupe_adb2191a0bf07c68fd86f0ee36b4cec8d}{Groupe}} (\mbox{\hyperlink{class_couleur}{Couleur}} couleur)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe_adf726dba5919371e203f34441215ef2d}{Groupe}} (const \mbox{\hyperlink{class_groupe}{Groupe}} \&)
+\begin{DoxyCompactList}\small\item\em Constructeur par recopie. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_groupe_a99dd414922635dcc0585aabb2a330f63}\label{class_groupe_a99dd414922635dcc0585aabb2a330f63}} 
+virtual \mbox{\hyperlink{class_groupe_a99dd414922635dcc0585aabb2a330f63}{$\sim$\+Groupe}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_groupe_ac677843fff8abf6c432295c84b91462d}{add\+Forme}} (\mbox{\hyperlink{class_forme}{Forme}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Ajoute une forme au groupe. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_groupe_a6b775538d63e633ea835bdbaa2afd233}{get\+At}} (unsigned int) const
+\begin{DoxyCompactList}\small\item\em return la forme a la position de l\textquotesingle{}index \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_groupe_ac3ba5def3d119ccc77237c96c0d35cb8}\label{class_groupe_ac3ba5def3d119ccc77237c96c0d35cb8}} 
+const vector$<$ \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ \mbox{\hyperlink{class_groupe_ac3ba5def3d119ccc77237c96c0d35cb8}{get\+Groupe}} () const
+\begin{DoxyCompactList}\small\item\em return le vector$<$\+Forme $\ast$$>$ du groupe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_groupe_af4708ce13fbcc867aec3f027663f676c}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vec\+Trans)
+\begin{DoxyCompactList}\small\item\em effectue une translation sur chaque forme du groupe par rapport a un vecteur \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_groupe_a88053e52f4144d3938aa2c656ddd6395}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, const double \&rapport\+Homothetie)
+\begin{DoxyCompactList}\small\item\em effectue une homothetie sur chaque forme du groupe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_groupe_a63a6fa7250c34731dc8166640b223de1}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, double radiant)
+\begin{DoxyCompactList}\small\item\em effectue une rotation sur chaque forme du groupe Effectue une rotation du cercle autour d\textquotesingle{}un point Invariant \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_groupe_ac002fde356ceb23ad7464cb802191765}{get\+Air}} () const
+\begin{DoxyCompactList}\small\item\em Return la somme des airs de chaque forme du groupe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_groupe_a614513db9e80b6e6c0811da16d89bb19}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Return un clone du groupe Return un pointeur sur un nouveau groupe créer avec le groupe courant. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_groupe_ab8bcab328da985da9907cffe76ca71d0}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em convertit le groupe en string \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_groupe_a79118af624ecc7913bc83b320b6facd8}\label{class_groupe_a79118af624ecc7913bc83b320b6facd8}} 
+const vector$<$ \mbox{\hyperlink{class_forme}{Forme}} $\ast$ $>$ \mbox{\hyperlink{class_groupe_a79118af624ecc7913bc83b320b6facd8}{get\+Groupes}} () const
+\begin{DoxyCompactList}\small\item\em return le vector$<$\+Forme $\ast$$>$ de l\textquotesingle{}objet \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_groupe_a1e2c361f1218dbdee98cd4629085b755}\label{class_groupe_a1e2c361f1218dbdee98cd4629085b755}} 
+void \mbox{\hyperlink{class_groupe_a1e2c361f1218dbdee98cd4629085b755}{accepte\+Dessin}} (\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Dessine le groupe param v \+: Le visiteur\+Dessin de la libairie avec laquelle le cercle doit etre dessiner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represente un groupe de forme. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_groupe_adb2191a0bf07c68fd86f0ee36b4cec8d}\label{class_groupe_adb2191a0bf07c68fd86f0ee36b4cec8d}} 
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{Groupe()}{Groupe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Groupe\+::\+Groupe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_couleur}{Couleur}}}]{couleur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & \+: la couleur du groupe \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_groupe_adf726dba5919371e203f34441215ef2d}\label{class_groupe_adf726dba5919371e203f34441215ef2d}} 
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\index{Groupe@{Groupe}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{Groupe()}{Groupe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Groupe\+::\+Groupe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} \&}]{g }\end{DoxyParamCaption})}
+
+
+
+Constructeur par recopie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em groupe} & \+: le groupe a copier \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_groupe_ac677843fff8abf6c432295c84b91462d}\label{class_groupe_ac677843fff8abf6c432295c84b91462d}} 
+\index{Groupe@{Groupe}!addForme@{addForme}}
+\index{addForme@{addForme}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{addForme()}{addForme()}}
+{\footnotesize\ttfamily void Groupe\+::add\+Forme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_forme}{Forme}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+Ajoute une forme au groupe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & \+: la forme a ajouter\\
+\hline
+\end{DoxyParams}
+Ajoute une forme au groupe si elle est non null. Lance une excepton si elle est null \mbox{\Hypertarget{class_groupe_a614513db9e80b6e6c0811da16d89bb19}\label{class_groupe_a614513db9e80b6e6c0811da16d89bb19}} 
+\index{Groupe@{Groupe}!clone@{clone}}
+\index{clone@{clone}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Groupe\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return un clone du groupe Return un pointeur sur un nouveau groupe créer avec le groupe courant. 
+
+Retourne un clone du groupe 
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_ac002fde356ceb23ad7464cb802191765}\label{class_groupe_ac002fde356ceb23ad7464cb802191765}} 
+\index{Groupe@{Groupe}!getAir@{getAir}}
+\index{getAir@{getAir}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{getAir()}{getAir()}}
+{\footnotesize\ttfamily double Groupe\+::get\+Air (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Return la somme des airs de chaque forme du groupe. 
+
+Renvoie la somme des airs du groupe 
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_a6b775538d63e633ea835bdbaa2afd233}\label{class_groupe_a6b775538d63e633ea835bdbaa2afd233}} 
+\index{Groupe@{Groupe}!getAt@{getAt}}
+\index{getAt@{getAt}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{getAt()}{getAt()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Groupe\+::get\+At (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+return la forme a la position de l\textquotesingle{}index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \+: position de la forme a retourner\\
+\hline
+\end{DoxyParams}
+Renvoi la forme a la position i Exception si i plus grand que tableau \mbox{\Hypertarget{class_groupe_a88053e52f4144d3938aa2c656ddd6395}\label{class_groupe_a88053e52f4144d3938aa2c656ddd6395}} 
+\index{Groupe@{Groupe}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Groupe\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{const double \&}]{rapport\+Homothetie }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+effectue une homothetie sur chaque forme du groupe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: point invariant \\
+\hline
+{\em rapport\+Homotehie} & \+: rapport d\textquotesingle{}homotethie\\
+\hline
+\end{DoxyParams}
+Renvoi un nouvelle forme qui est l\textquotesingle{}homothetie de la forme courante 
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_ab8bcab328da985da9907cffe76ca71d0}\label{class_groupe_ab8bcab328da985da9907cffe76ca71d0}} 
+\index{Groupe@{Groupe}!operator string@{operator string}}
+\index{operator string@{operator string}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{operator string()}{operator string()}}
+{\footnotesize\ttfamily Groupe\+::operator string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+convertit le groupe en string 
+
+parse un groupe 
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_a63a6fa7250c34731dc8166640b223de1}\label{class_groupe_a63a6fa7250c34731dc8166640b223de1}} 
+\index{Groupe@{Groupe}!rotation@{rotation}}
+\index{rotation@{rotation}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Groupe\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{double}]{radiant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+effectue une rotation sur chaque forme du groupe Effectue une rotation du cercle autour d\textquotesingle{}un point Invariant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: Point invariant autour du quelle le cercle va tourner \\
+\hline
+{\em radiant} & \+: l\textquotesingle{}angle de rotation\\
+\hline
+\end{DoxyParams}
+Renvoi un nouvelle forme qui est la rotation de la forme courante 
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_groupe_af4708ce13fbcc867aec3f027663f676c}\label{class_groupe_af4708ce13fbcc867aec3f027663f676c}} 
+\index{Groupe@{Groupe}!translation@{translation}}
+\index{translation@{translation}!Groupe@{Groupe}}
+\subsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Groupe\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vec\+Trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+effectue une translation sur chaque forme du groupe par rapport a un vecteur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+Trans} & \+: le vecteur de translation\\
+\hline
+\end{DoxyParams}
+Renvoi un nouvelle forme qui est la translation de la forme courante 
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_groupe_8hpp}{Groupe.\+hpp}}\item 
+Groupe.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,149 @@
+\hypertarget{class_dessiner_s_f_m_l}{}\section{Dessiner\+S\+F\+ML Class Reference}
+\label{class_dessiner_s_f_m_l}\index{DessinerSFML@{DessinerSFML}}
+
+
+Dessiner grace a S\+F\+ML.  
+
+
+
+
+{\ttfamily \#include $<$Dessiner\+S\+F\+M\+L.\+hpp$>$}
+
+Inheritance diagram for Dessiner\+S\+F\+ML\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_dessiner_s_f_m_l}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_a83d131b2368b9ec1fec1c707ce8c42f1}\label{class_dessiner_s_f_m_l_a83d131b2368b9ec1fec1c707ce8c42f1}} 
+{\bfseries Dessiner\+S\+F\+ML} (const string \&nom\+Fenetre, int hauteur, int largeur)
+\item 
+void \mbox{\hyperlink{class_dessiner_s_f_m_l_a94dcb5037f1690eea6c38385065a68a8}{visite}} (const \mbox{\hyperlink{class_segment}{Segment}} $\ast$segment)
+\begin{DoxyCompactList}\small\item\em Dessine un segment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dessiner_s_f_m_l_accb8ed59253778163ecd3ca8b37e66de}{visite}} (const \mbox{\hyperlink{class_cercle}{Cercle}} $\ast$cercle)
+\begin{DoxyCompactList}\small\item\em Dessine un cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dessiner_s_f_m_l_a8349e760caad82d54bd202d58cdc37fa}{visite}} (const \mbox{\hyperlink{class_polygone}{Polygone}} $\ast$polygone)
+\begin{DoxyCompactList}\small\item\em Dessine un poylgone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dessiner_s_f_m_l_ae06c6ea55ae3fc2f9c230a8639c14108}{visite}} (const \mbox{\hyperlink{class_triangle}{Triangle}} $\ast$triangle)
+\begin{DoxyCompactList}\small\item\em Dessine un triangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dessiner_s_f_m_l_a7269769a1a0756b590fd5678a179245d}{visite}} (const \mbox{\hyperlink{class_groupe}{Groupe}} $\ast$groupe)
+\begin{DoxyCompactList}\small\item\em Dessine un groupe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_afe88746b9800a4c79798459559494dd0}\label{class_dessiner_s_f_m_l_afe88746b9800a4c79798459559494dd0}} 
+void \mbox{\hyperlink{class_dessiner_s_f_m_l_afe88746b9800a4c79798459559494dd0}{run}} ()
+\begin{DoxyCompactList}\small\item\em lance l\textquotesingle{}affichage de la fenetre \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_a0cdda71498416b55fe4aee1c4119a92f}\label{class_dessiner_s_f_m_l_a0cdda71498416b55fe4aee1c4119a92f}} 
+sf\+::\+Render\+Window {\bfseries window}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Dessiner grace a S\+F\+ML. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_a94dcb5037f1690eea6c38385065a68a8}\label{class_dessiner_s_f_m_l_a94dcb5037f1690eea6c38385065a68a8}} 
+\index{DessinerSFML@{DessinerSFML}!visite@{visite}}
+\index{visite@{visite}!DessinerSFML@{DessinerSFML}}
+\subsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Dessiner\+S\+F\+M\+L\+::visite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_segment}{Segment}} $\ast$}]{segment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine un segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \+: le segment a dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}}.
+
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_accb8ed59253778163ecd3ca8b37e66de}\label{class_dessiner_s_f_m_l_accb8ed59253778163ecd3ca8b37e66de}} 
+\index{DessinerSFML@{DessinerSFML}!visite@{visite}}
+\index{visite@{visite}!DessinerSFML@{DessinerSFML}}
+\subsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Dessiner\+S\+F\+M\+L\+::visite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_cercle}{Cercle}} $\ast$}]{cercle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine un cercle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \+: le cercle a dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}}.
+
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_a8349e760caad82d54bd202d58cdc37fa}\label{class_dessiner_s_f_m_l_a8349e760caad82d54bd202d58cdc37fa}} 
+\index{DessinerSFML@{DessinerSFML}!visite@{visite}}
+\index{visite@{visite}!DessinerSFML@{DessinerSFML}}
+\subsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Dessiner\+S\+F\+M\+L\+::visite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_polygone}{Polygone}} $\ast$}]{polygone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine un poylgone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \+: le polygone a dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}}.
+
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_ae06c6ea55ae3fc2f9c230a8639c14108}\label{class_dessiner_s_f_m_l_ae06c6ea55ae3fc2f9c230a8639c14108}} 
+\index{DessinerSFML@{DessinerSFML}!visite@{visite}}
+\index{visite@{visite}!DessinerSFML@{DessinerSFML}}
+\subsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Dessiner\+S\+F\+M\+L\+::visite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_triangle}{Triangle}} $\ast$}]{triangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine un triangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \+: le triangle a dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}}.
+
+\mbox{\Hypertarget{class_dessiner_s_f_m_l_a7269769a1a0756b590fd5678a179245d}\label{class_dessiner_s_f_m_l_a7269769a1a0756b590fd5678a179245d}} 
+\index{DessinerSFML@{DessinerSFML}!visite@{visite}}
+\index{visite@{visite}!DessinerSFML@{DessinerSFML}}
+\subsubsection{\texorpdfstring{visite()}{visite()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Dessiner\+S\+F\+M\+L\+::visite (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_groupe}{Groupe}} $\ast$}]{groupe }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine un groupe. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em segment} & \+: le groupe a dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_dessiner_s_f_m_l_8hpp}{Dessiner\+S\+F\+M\+L.\+hpp}}\item 
+Dessiner\+S\+F\+M\+L.\+cpp\end{DoxyCompactItemize}

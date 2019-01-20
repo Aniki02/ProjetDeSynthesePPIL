@@ -1,0 +1,184 @@
+\hypertarget{class_segment}{}\section{Segment Class Reference}
+\label{class_segment}\index{Segment@{Segment}}
+Inheritance diagram for Segment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_segment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_segment_a2d4d4fe7d5b53695a463c10f6dac73a8}{Segment}} (\mbox{\hyperlink{class_couleur}{Couleur}} couleur, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&x, const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&y)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_segment_a5babc73a2978e1aa99b73a4c19d41dd8}\label{class_segment_a5babc73a2978e1aa99b73a4c19d41dd8}} 
+virtual \mbox{\hyperlink{class_segment_a5babc73a2978e1aa99b73a4c19d41dd8}{$\sim$\+Segment}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_segment_a52c16b8bbaef8093b51df037003dd734}\label{class_segment_a52c16b8bbaef8093b51df037003dd734}} 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_segment_a52c16b8bbaef8093b51df037003dd734}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Return un clone du cercle Return un pointeur sur un nouveau cercle créer avec le cercle courant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_segment_a267dfd504311b462b62830f14223c1a4}\label{class_segment_a267dfd504311b462b62830f14223c1a4}} 
+double \mbox{\hyperlink{class_segment_a267dfd504311b462b62830f14223c1a4}{get\+Air}} () const
+\begin{DoxyCompactList}\small\item\em Return l\textquotesingle{}air du cercle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_segment_a86c0e40a43e4a0aa222fd16826a1c0bf}\label{class_segment_a86c0e40a43e4a0aa222fd16826a1c0bf}} 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_a86c0e40a43e4a0aa222fd16826a1c0bf}{get\+Arrive}} () const
+\begin{DoxyCompactList}\small\item\em Return le points d\textquotesingle{}Arrive du segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_segment_ae8017861cf4d3d685f9ee5a5eadfeaa0}\label{class_segment_ae8017861cf4d3d685f9ee5a5eadfeaa0}} 
+\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_segment_ae8017861cf4d3d685f9ee5a5eadfeaa0}{get\+Origine}} () const
+\begin{DoxyCompactList}\small\item\em Return le point de depart du segment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_a3b33717b3f597a5a723b9f92d989ace2}{set\+Arrive}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)
+\begin{DoxyCompactList}\small\item\em Change le point d\textquotesingle{}arrive. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_ae22cb982d85cec7a92c7dd1c2c862210}{set\+Origine}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&v)
+\begin{DoxyCompactList}\small\item\em Change le point de depart. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_segment_ab9106868b99c5238e1b46c0e86280913}{accepte\+Dessin}} (\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$visiteur) const
+\begin{DoxyCompactList}\small\item\em Dessine le segment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_segment_a0a4ba467ac01d3ece7c5136faf08be1a}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vec\+Trans)
+\begin{DoxyCompactList}\small\item\em Deplace le cercle par rapport a un vecteur. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_segment_ac1bcee908f7c0a051fc72efa9e3e4b57}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, const double \&rapport\+Homothetie)
+\begin{DoxyCompactList}\small\item\em Effectue une homotehie sur le cercle effectue une transformation qui fais correspondre tout point par rapport a un point invariant et un rapport. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_segment_ae36f2f88b61ba79119398652411eb49b}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, double radiant)
+\begin{DoxyCompactList}\small\item\em effectue une rotation sur le cercle Effectue une rotation du cercle autour d\textquotesingle{}un point Invariant \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_segment_a28b3be893a35a0d73574354752c147fd}\label{class_segment_a28b3be893a35a0d73574354752c147fd}} 
+virtual \mbox{\hyperlink{class_segment_a28b3be893a35a0d73574354752c147fd}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em Convertit la forme en string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_segment_a2d4d4fe7d5b53695a463c10f6dac73a8}\label{class_segment_a2d4d4fe7d5b53695a463c10f6dac73a8}} 
+\index{Segment@{Segment}!Segment@{Segment}}
+\index{Segment@{Segment}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{Segment()}{Segment()}}
+{\footnotesize\ttfamily Segment\+::\+Segment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_couleur}{Couleur}}}]{couleur,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{x,  }\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{y }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em couleur} & \+: la couleur du segment \\
+\hline
+{\em x} & \+: le point de depart du segment \\
+\hline
+{\em y} & \+: le point d\textquotesingle{}arrive du segment \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_segment_ab9106868b99c5238e1b46c0e86280913}\label{class_segment_ab9106868b99c5238e1b46c0e86280913}} 
+\index{Segment@{Segment}!accepteDessin@{accepteDessin}}
+\index{accepteDessin@{accepteDessin}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{accepteDessin()}{accepteDessin()}}
+{\footnotesize\ttfamily void Segment\+::accepte\+Dessin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$}]{visiteur }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine le segment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: Le visiteur\+Dessin de la libairie avec laquelle le cercle doit etre dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_ac1bcee908f7c0a051fc72efa9e3e4b57}\label{class_segment_ac1bcee908f7c0a051fc72efa9e3e4b57}} 
+\index{Segment@{Segment}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Segment\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{const double \&}]{rapport\+Homothetie }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Effectue une homotehie sur le cercle effectue une transformation qui fais correspondre tout point par rapport a un point invariant et un rapport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: point invariant \\
+\hline
+{\em rapport\+Homotehie} & \+: rapport d\textquotesingle{}homotethie \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_ae36f2f88b61ba79119398652411eb49b}\label{class_segment_ae36f2f88b61ba79119398652411eb49b}} 
+\index{Segment@{Segment}!rotation@{rotation}}
+\index{rotation@{rotation}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Segment\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{double}]{radiant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+effectue une rotation sur le cercle Effectue une rotation du cercle autour d\textquotesingle{}un point Invariant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: Point invariant autour du quelle le cercle va tourner \\
+\hline
+{\em radiant} & \+: l\textquotesingle{}angle de rotation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_segment_a3b33717b3f597a5a723b9f92d989ace2}\label{class_segment_a3b33717b3f597a5a723b9f92d989ace2}} 
+\index{Segment@{Segment}!setArrive@{setArrive}}
+\index{setArrive@{setArrive}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{setArrive()}{setArrive()}}
+{\footnotesize\ttfamily void Segment\+::set\+Arrive (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change le point d\textquotesingle{}arrive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: nouveau point d\textquotesingle{}arrive \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_segment_ae22cb982d85cec7a92c7dd1c2c862210}\label{class_segment_ae22cb982d85cec7a92c7dd1c2c862210}} 
+\index{Segment@{Segment}!setOrigine@{setOrigine}}
+\index{setOrigine@{setOrigine}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{setOrigine()}{setOrigine()}}
+{\footnotesize\ttfamily void Segment\+::set\+Origine (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change le point de depart. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: nouveau point de depart \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_segment_a0a4ba467ac01d3ece7c5136faf08be1a}\label{class_segment_a0a4ba467ac01d3ece7c5136faf08be1a}} 
+\index{Segment@{Segment}!translation@{translation}}
+\index{translation@{translation}!Segment@{Segment}}
+\subsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Segment\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vec\+Trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deplace le cercle par rapport a un vecteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+Trans} & \+: le vecteur qui \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_segment_8hpp}{Segment.\+hpp}}\item 
+Segment.\+cpp\end{DoxyCompactItemize}

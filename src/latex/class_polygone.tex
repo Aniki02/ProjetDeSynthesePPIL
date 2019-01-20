@@ -1,0 +1,195 @@
+\hypertarget{class_polygone}{}\section{Polygone Class Reference}
+\label{class_polygone}\index{Polygone@{Polygone}}
+
+
+represente un polygone definit par un vector$<$\+Vecteur2\+D$>$ de au moin 3 points  
+
+
+
+
+{\ttfamily \#include $<$Polygone.\+hpp$>$}
+
+Inheritance diagram for Polygone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_polygone}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_polygone_a42d0618a808a036f953c81987cd38d97}{Polygone}} (\mbox{\hyperlink{class_couleur}{Couleur}} c, const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ points)
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygone_a30baef6bb6fc31ca9a42712b72eb36fc}\label{class_polygone_a30baef6bb6fc31ca9a42712b72eb36fc}} 
+virtual \mbox{\hyperlink{class_polygone_a30baef6bb6fc31ca9a42712b72eb36fc}{$\sim$\+Polygone}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygone_aab31a3b2e17d26d665ee9c1e7d1896c2}\label{class_polygone_aab31a3b2e17d26d665ee9c1e7d1896c2}} 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_polygone_aab31a3b2e17d26d665ee9c1e7d1896c2}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Return un clone du polygone Return un pointeur sur un nouveau cercle créer avec le cercle courant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygone_a72fcca629733c87d8c297a0145ec0a57}\label{class_polygone_a72fcca629733c87d8c297a0145ec0a57}} 
+virtual double \mbox{\hyperlink{class_polygone_a72fcca629733c87d8c297a0145ec0a57}{get\+Air}} () const
+\begin{DoxyCompactList}\small\item\em Return l\textquotesingle{}air du polygone. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_polygone_ad134e21390e95d8f3d6018df0091b282}{add\+Point}} (\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}})
+\begin{DoxyCompactList}\small\item\em ajoute un points au polygone \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \mbox{\hyperlink{class_polygone_a42ae9f828760d86f55c451f962c3d971}{get\+Point\+At}} (unsigned int index) const
+\begin{DoxyCompactList}\small\item\em return le point a la position de l\textquotesingle{}index \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_polygone_a3fa7127577c992041b80cb5dd7e56671}{translation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&vec\+Trans)
+\begin{DoxyCompactList}\small\item\em Deplace le polygone par rapport a un vecteur. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_polygone_a2b3a44918d723d9fc8bf053b7d8410cb}{homothetie}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, const double \&rapport\+Homothetie)
+\begin{DoxyCompactList}\small\item\em Effectue une homotehie sur le polygone effectue une transformation qui fais correspondre tout point par rapport a un point invariant et un rapport. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_polygone_a8d2a29722b3e3256fac28bc3e0af1136}{rotation}} (const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&p\+Invariant, double radiant)
+\begin{DoxyCompactList}\small\item\em effectue une rotation sur le polygone Effectue une rotation du polygone autour d\textquotesingle{}un point Invariant \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_polygone_ae39b5264345f7d2f64112a9680155844}{accepte\+Dessin}} (\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Dessine le polygone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygone_a3ded5fc50f6db8d734b4272c604d6d8c}\label{class_polygone_a3ded5fc50f6db8d734b4272c604d6d8c}} 
+const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ \mbox{\hyperlink{class_polygone_a3ded5fc50f6db8d734b4272c604d6d8c}{get\+Points}} () const
+\begin{DoxyCompactList}\small\item\em return le vector$<$\+Vecteur2\+D$>$ de l\textquotesingle{}objet \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_polygone_abd801a84b5306df8021f1571d82deafd}\label{class_polygone_abd801a84b5306df8021f1571d82deafd}} 
+\mbox{\hyperlink{class_polygone_abd801a84b5306df8021f1571d82deafd}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em convertit un polygone en string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+represente un polygone definit par un vector$<$\+Vecteur2\+D$>$ de au moin 3 points 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_polygone_a42d0618a808a036f953c81987cd38d97}\label{class_polygone_a42d0618a808a036f953c81987cd38d97}} 
+\index{Polygone@{Polygone}!Polygone@{Polygone}}
+\index{Polygone@{Polygone}!Polygone@{Polygone}}
+\subsubsection{\texorpdfstring{Polygone()}{Polygone()}}
+{\footnotesize\ttfamily Polygone\+::\+Polygone (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_couleur}{Couleur}}}]{c,  }\item[{const vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$}]{points }\end{DoxyParamCaption})}
+
+
+
+Constructeur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \+: la couleur du polygone \\
+\hline
+{\em points} & \+: vector de points du polygone \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_polygone_ae39b5264345f7d2f64112a9680155844}\label{class_polygone_ae39b5264345f7d2f64112a9680155844}} 
+\index{Polygone@{Polygone}!accepteDessin@{accepteDessin}}
+\index{accepteDessin@{accepteDessin}!Polygone@{Polygone}}
+\subsubsection{\texorpdfstring{accepteDessin()}{accepteDessin()}}
+{\footnotesize\ttfamily void Polygone\+::accepte\+Dessin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine le polygone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: Le visiteur\+Dessin de la libairie avec laquelle le polygone doit etre dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_triangle_a62721a9e7bba3365fa3b72534511ee2b}{Triangle}}.
+
+\mbox{\Hypertarget{class_polygone_ad134e21390e95d8f3d6018df0091b282}\label{class_polygone_ad134e21390e95d8f3d6018df0091b282}} 
+\index{Polygone@{Polygone}!addPoint@{addPoint}}
+\index{addPoint@{addPoint}!Polygone@{Polygone}}
+\subsubsection{\texorpdfstring{addPoint()}{addPoint()}}
+{\footnotesize\ttfamily void Polygone\+::add\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}}}]{v }\end{DoxyParamCaption})}
+
+
+
+ajoute un points au polygone 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: le points a ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_polygone_a42ae9f828760d86f55c451f962c3d971}\label{class_polygone_a42ae9f828760d86f55c451f962c3d971}} 
+\index{Polygone@{Polygone}!getPointAt@{getPointAt}}
+\index{getPointAt@{getPointAt}!Polygone@{Polygone}}
+\subsubsection{\texorpdfstring{getPointAt()}{getPointAt()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} Polygone\+::get\+Point\+At (\begin{DoxyParamCaption}\item[{unsigned int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+return le point a la position de l\textquotesingle{}index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \+: position de la forme a retourner \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_polygone_a2b3a44918d723d9fc8bf053b7d8410cb}\label{class_polygone_a2b3a44918d723d9fc8bf053b7d8410cb}} 
+\index{Polygone@{Polygone}!homothetie@{homothetie}}
+\index{homothetie@{homothetie}!Polygone@{Polygone}}
+\subsubsection{\texorpdfstring{homothetie()}{homothetie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Polygone\+::homothetie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{const double \&}]{rapport\+Homothetie }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Effectue une homotehie sur le polygone effectue une transformation qui fais correspondre tout point par rapport a un point invariant et un rapport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: point invariant \\
+\hline
+{\em rapport\+Homotehie} & \+: rapport d\textquotesingle{}homotethie \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_a8d2a29722b3e3256fac28bc3e0af1136}\label{class_polygone_a8d2a29722b3e3256fac28bc3e0af1136}} 
+\index{Polygone@{Polygone}!rotation@{rotation}}
+\index{rotation@{rotation}!Polygone@{Polygone}}
+\subsubsection{\texorpdfstring{rotation()}{rotation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Polygone\+::rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{p\+Invariant,  }\item[{double}]{radiant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+effectue une rotation sur le polygone Effectue une rotation du polygone autour d\textquotesingle{}un point Invariant 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Invariant} & \+: Point invariant autour du quelle le cercle va tourner \\
+\hline
+{\em radiant} & \+: l\textquotesingle{}angle de rotation \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+\mbox{\Hypertarget{class_polygone_a3fa7127577c992041b80cb5dd7e56671}\label{class_polygone_a3fa7127577c992041b80cb5dd7e56671}} 
+\index{Polygone@{Polygone}!translation@{translation}}
+\index{translation@{translation}!Polygone@{Polygone}}
+\subsubsection{\texorpdfstring{translation()}{translation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_forme}{Forme}} $\ast$ Polygone\+::translation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} \&}]{vec\+Trans }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deplace le polygone par rapport a un vecteur. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec\+Trans} & \+: le vecteur qui \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_forme}{Forme}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_polygone_8hpp}{Polygone.\+hpp}}\item 
+Polygone.\+cpp\end{DoxyCompactItemize}

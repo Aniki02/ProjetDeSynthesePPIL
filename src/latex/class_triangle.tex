@@ -1,0 +1,53 @@
+\hypertarget{class_triangle}{}\section{Triangle Class Reference}
+\label{class_triangle}\index{Triangle@{Triangle}}
+Inheritance diagram for Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_triangle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_triangle_a05eebba4f10fecb894246f50f1770636}\label{class_triangle_a05eebba4f10fecb894246f50f1770636}} 
+{\bfseries Triangle} (\mbox{\hyperlink{class_couleur}{Couleur}} couleur, vector$<$ \mbox{\hyperlink{class_vecteur2_d}{Vecteur2D}} $>$ points)
+\item 
+\mbox{\Hypertarget{class_triangle_a9ed5d2e740b1130192a8aa30d5541cb7}\label{class_triangle_a9ed5d2e740b1130192a8aa30d5541cb7}} 
+\mbox{\hyperlink{class_forme}{Forme}} $\ast$ \mbox{\hyperlink{class_triangle_a9ed5d2e740b1130192a8aa30d5541cb7}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Return un clone du polygone Return un pointeur sur un nouveau cercle créer avec le cercle courant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_triangle_a362e1877b1cf7d718ecbce666bd8e5f7}\label{class_triangle_a362e1877b1cf7d718ecbce666bd8e5f7}} 
+double \mbox{\hyperlink{class_triangle_a362e1877b1cf7d718ecbce666bd8e5f7}{get\+Air}} () const
+\begin{DoxyCompactList}\small\item\em Return l\textquotesingle{}air du polygone. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_triangle_acd8612cc20ffb71e543944c869e4ab81}\label{class_triangle_acd8612cc20ffb71e543944c869e4ab81}} 
+\mbox{\hyperlink{class_triangle_acd8612cc20ffb71e543944c869e4ab81}{operator string}} () const
+\begin{DoxyCompactList}\small\item\em convertit un polygone en string \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_triangle_a62721a9e7bba3365fa3b72534511ee2b}{accepte\+Dessin}} (\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$v) const
+\begin{DoxyCompactList}\small\item\em Dessine le polygone. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_triangle_a62721a9e7bba3365fa3b72534511ee2b}\label{class_triangle_a62721a9e7bba3365fa3b72534511ee2b}} 
+\index{Triangle@{Triangle}!accepteDessin@{accepteDessin}}
+\index{accepteDessin@{accepteDessin}!Triangle@{Triangle}}
+\subsubsection{\texorpdfstring{accepteDessin()}{accepteDessin()}}
+{\footnotesize\ttfamily void Triangle\+::accepte\+Dessin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_visitor_dessiner_forme}{Visitor\+Dessiner\+Forme}} $\ast$}]{v }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Dessine le polygone. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \+: Le visiteur\+Dessin de la libairie avec laquelle le polygone doit etre dessiner \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_polygone_ae39b5264345f7d2f64112a9680155844}{Polygone}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Triangle.\+hpp\item 
+Triangle.\+cpp\end{DoxyCompactItemize}
